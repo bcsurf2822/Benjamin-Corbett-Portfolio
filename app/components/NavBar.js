@@ -1,45 +1,36 @@
 import React from "react";
 import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar() {
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-        <div className="flex items-center flex-shrink-0 text-blue-700 mr-6">
-          <h3 className="font-extrabold text-xl tracking-tight flex flex-col">Benjamin Corbett <span>Full-Stack Developer</span></h3>
+      <nav className="flex items-center justify-between flex-wrap bg-black p-6 border-b-4 border-cyan-400 shadow-lg">
+        <div className="flex items-center flex-shrink-0 text-cyan-400 mr-6">
+          <h3 className="font-extrabold text-3xl tracking-tight flex flex-col gap-5 ">Benjamin Corbett <span className="text-lg italic">Full-Stack Developer</span></h3>
         </div>
-        <div className="block lg:hidden">
-          <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
+
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="text-sm lg:flex-grow">
-            <Link  href="/about"   className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          <div className="text-lg font-bold lg:flex-grow ">
+            <Link  href="/about"   className="block mt-4 lg:inline-block lg:mt-0  text-cyan-400  hover:text-white mr-4 hover:underline">
               About
             </Link>
             <Link
               href="/cv"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0  text-cyan-400  hover:text-white hover:underline mr-4"
             >
               CV
             </Link>
             <Link
               href="/projects"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0  text-cyan-400  hover:text-white mr-4 hover:underline"
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+              className="block mt-4 lg:inline-block lg:mt-0  text-cyan-400  hover:text-white hover:underline"
             >
               Contact
             </Link>
@@ -47,9 +38,9 @@ export default function NavBar() {
           <div>
             <Link
               href="/"
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+          
             >
-              Home
+              <FontAwesomeIcon className="h-8   text-cyan-400 hover:text-white " icon={faHouseChimney} />
             </Link>
           </div>
         </div>

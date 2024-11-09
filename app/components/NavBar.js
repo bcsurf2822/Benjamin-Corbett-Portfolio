@@ -2,6 +2,7 @@ import React from "react";
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import ThemeToggle from "./ThemeToggle";
 
 export default function NavBar() {
   return (
@@ -42,6 +43,7 @@ export default function NavBar() {
             >
               <FontAwesomeIcon className="h-8   text-cyan-400 hover:text-white " icon={faHouseChimney} />
             </Link>
+            <ThemeToggle />
           </div>
         </div>
       </nav>

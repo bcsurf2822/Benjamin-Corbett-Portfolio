@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center h-screen justify-center gap-4">
+    <section className="text-white overflow-hidden bg-slate-900 flex flex-col items-center mt-24 justify-center px-8 py-24 md:px-12 md:py-32 ">
       <h1 className="text-4xl">Lets Connect</h1>
 
       <h1 className="text-2xl text-center">
@@ -35,6 +35,6 @@ export default function Contact() {
           />
         </Link>
       </div>
-    </div>
+  </section>
   );
 }

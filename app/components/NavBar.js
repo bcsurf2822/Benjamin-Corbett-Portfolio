@@ -2,12 +2,11 @@ import React from "react";
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-import ThemeToggle from "./ThemeToggle";
 
 export default function NavBar() {
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-black p-6 border-b-4 border-cyan-400 shadow-lg">
+      <nav className="flex items-center justify-between flex-wrap  p-6 border-b-4 border-cyan-400 shadow-lg">
         <div className="flex items-center flex-shrink-0 text-cyan-400 mr-6">
           <h3 className="font-extrabold text-3xl tracking-tight flex flex-col gap-5 ">Benjamin Corbett <span className="text-lg italic">Full-Stack Developer</span></h3>
         </div>
@@ -43,7 +42,6 @@ export default function NavBar() {
             >
               <FontAwesomeIcon className="h-8   text-cyan-400 hover:text-white " icon={faHouseChimney} />
             </Link>
-            <ThemeToggle />
           </div>
         </div>
       </nav>

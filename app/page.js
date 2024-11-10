@@ -25,7 +25,7 @@ const Home = () => {
           <Reveal>
             <p className="pointer-events-auto max-w-xl text-sm text-slate-300 md:text-base">
               Based out of Marmora NJ. I am
-              driven by building unique user friend sites and application by
+              driven by building unique user friendly sites and applications by
               harnessing my skills in NextJS and staying current on the latest
               trends in web development
             </p>

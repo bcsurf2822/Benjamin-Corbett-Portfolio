@@ -16,25 +16,30 @@ export default function Contact() {
       </h1>
 
       <div className="flex gap-6 mt-4">
-        <Link href="https://www.linkedin.com/in/benjamin-corbett-84822424a/">
-          <FontAwesomeIcon
-            className="h-9 text-yellow-300  cursor-pointer hover:scale-125"
-            icon={faLinkedin}
-          />
-        </Link>
-        <Link href="https://github.com/bcsurf2822">
-          <FontAwesomeIcon
-            className="h-9 text-yellow-300 cursor-pointer hover:scale-125"
-            icon={faSquareGithub}
-          />
-        </Link>
-        <Link href="https://calendly.com/ben-corbett-44">
-          <FontAwesomeIcon
-            className="h-9 text-yellow-300 cursor-pointer hover:scale-125"
-            icon={faCalendarDays}
-          />
-        </Link>
+        <NewTabLink
+          link="https://www.linkedin.com/in/benjamin-corbett-84822424a"
+          icon={faLinkedin}
+        />
+        <NewTabLink
+          link="https://github.com/bcsurf2822"
+          icon={faSquareGithub}
+        />
+        <NewTabLink
+          link="https://calendly.com/ben-corbett-44"
+          icon={faCalendarDays}
+        />
       </div>
-  </section>
+    </section>
   );
 }
+
+const NewTabLink = ({ link, icon }) => (
+  <>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon
+        className="h-9 text-yellow-300 cursor-pointer hover:scale-125"
+        icon={icon}
+      />
+    </a>
+  </>
+);

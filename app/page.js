@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Home = () => {
   return (
-    <section className="text-slat-100 overflow-hidden bg-slate-900 px-8 py-24 md:px-12 md:py-32 ">
+    <section className="mt-10 text-slate-100 overflow-hidden bg-slate-900 px-8 py-24  md:px-12 md:py-32 ">
       <div className="relative mx-auto max-w-5xl">
         <div className="pointer-events-none relative z-10">
           <Reveal>

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-
 const NavBar = () => {
   return (
     <div className="bg-gray-50 ">
@@ -73,13 +72,30 @@ const NavLeft = ({ setIsOpen }) => {
   );
 };
 
+// const NavLink = ({ text }) => {
+//   return (
+//     <motion.div whileHover={{ y: -30 }}>
+//       <span className="flex items-center h-[30px] text-gray-500">{text}</span>
+//     </motion.div>
+//   );
+// };
+
 const NavLink = ({ text }) => {
   return (
-    <motion.div whileHover={{ y: -30 }}>
-      <span className="flex items-center h-[30px] text-gray-500">{text}</span>
-    </motion.div>
+    <a
+      href="#"
+      rel="nofollow"
+      className="hidden lg:block h-[30px] overflow-hidden font-medium"
+    >
+      <motion.div whileHover={{ y: -30 }}>
+        <span className="flex items-center h-[30px] text-gray-500">{text}</span>
+
+        <span className="flex items-center h-[30px] text-indigo-600">
+          {text}
+        </span>
+      </motion.div>
+    </a>
   );
 };
 
 export default NavBar;
-

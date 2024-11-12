@@ -72,29 +72,25 @@ const NavLeft = ({ setIsOpen }) => {
   );
 };
 
-// const NavLink = ({ text }) => {
-//   return (
-//     <motion.div whileHover={{ y: -30 }}>
-//       <span className="flex items-center h-[30px] text-gray-500">{text}</span>
-//     </motion.div>
-//   );
-// };
-
 const NavLink = ({ text }) => {
   return (
-    <a
-      href="#"
-      rel="nofollow"
-      className="hidden lg:block h-[30px] overflow-hidden font-medium"
-    >
-      <motion.div whileHover={{ y: -30 }}>
-        <span className="flex items-center h-[30px] text-gray-500">{text}</span>
+    <div>
+      <a
+        href="#"
+        rel="nofollow"
+        className="block h-[30px] overflow-hidden font-medium"
+      >
+        <motion.div whileHover={{ y: -30 }}>
+          <span className="flex items-center h-[30px] text-gray-500">
+            {text}
+          </span>
 
-        <span className="flex items-center h-[30px] text-indigo-600">
-          {text}
-        </span>
-      </motion.div>
-    </a>
+          <span className="flex items-center h-[30px] text-indigo-600">
+            {text}
+          </span>
+        </motion.div>
+      </a>
+    </div>
   );
 };
 

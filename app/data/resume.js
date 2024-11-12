@@ -5,8 +5,8 @@ export const resumeData = {
     contact: {
       phone: "(609) 320-7586",
       email: "crystaledgedev22@gmail.com",
-      linkedin: "https://linkedin.com/in/yourprofile",
-      github: "https://github.com/yourusername",
+      linkedin: "https://www.linkedin.com/in/benjamin-corbett-84822424a/",
+      github: "https://github.com/bcsurf2822",
     },
     summary: "Full-Stack Web Developer with hands-on experience in JavaScript technologies, including React, Redux, Redux Toolkit, REST APIs, Express.js, Node.js, and MongoDB. I have worked with WebSockets for real-time communication and used Jest for testing. My projects are styled using a mobile-first responsive approach with Tailwind CSS and Bootstrap. I am familiar with Agile and SCRUM methodologies, Git-flow, and pair programming. Currently, I am developing my skills in TypeScript and Amazon Web Services.",
     additionalInfo: "As a developer, my goal is to work on a team that supports and pushes each other to deliver a great end product. When I’m not coding, I enjoy staying current on trends in technology, practicing yoga, surfing, hiking, and spending time with my wife and dog."

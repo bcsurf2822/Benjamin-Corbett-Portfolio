@@ -12,7 +12,7 @@ export const resumeData = {
     additionalInfo: "As a developer, my goal is to work on a team that supports and pushes each other to deliver a great end product. When I’m not coding, I enjoy staying current on trends in technology, practicing yoga, surfing, hiking, and spending time with my wife and dog."
   },
   techStack: [
-    "React", "Next.js", "Redux", "Redux Toolkit", "JavaScript",
+    "React", "Next.js", "Redux Toolkit", "JavaScript",
     "Node.js", "Express", "MongoDB", "PostgreSQL", "WebSockets", "REST API", "Jest", "Mocha", "Chai",
     "Tailwind CSS", "Bootstrap"
   ],

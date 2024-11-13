@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section className="text-white overflow-hidden bg-slate-900 flex flex-col items-center mt-10 justify-center px-8 py-24 md:px-12 md:py-32 ">
+    <section className="text-white overflow-hidden bg-slate-900 flex flex-col items-center mt-10   h-[67vh] justify-center px-8 py-24 md:px-12 md:py-32  ">
       <h1 className="text-4xl">Lets Connect</h1>
 
       <h1 className="text-2xl text-center">

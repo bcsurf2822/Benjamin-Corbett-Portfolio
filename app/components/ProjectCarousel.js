@@ -8,7 +8,7 @@ import useMeasure from "react-use-measure";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@mui/material";
-import Link from "next/link";
+import { projects } from "../data/projects";
 
 const CARD_WIDTH = 350;
 const MARGIN = 20;
@@ -29,7 +29,7 @@ const ProjectCarousel = () => {
   const CAN_SHIFT_LEFT = offset < 0;
 
   const CAN_SHIFT_RIGHT =
-    Math.abs(offset) < CARD_SIZE * (posts.length - CARD_BUFFER);
+    Math.abs(offset) < CARD_SIZE * (projects.length - CARD_BUFFER);
 
   const shiftLeft = () => {
     if (!CAN_SHIFT_LEFT) {
@@ -46,7 +46,7 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="bg-slate-900 py-8 mt-10" ref={ref}>
+    <section className="bg-slate-900  h-[67vh] py-8 mt-10" ref={ref}>
       <div className="relative overflow-hidden p-4">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">
@@ -82,7 +82,7 @@ const ProjectCarousel = () => {
             }}
             className="flex"
           >
-            {posts.map((post) => {
+            {projects.map((post) => {
               return <Post key={post.id} {...post} />;
             })}
           </motion.div>
@@ -134,65 +134,65 @@ const Post = ({ imgUrl, tech, title, github, demo, description }) => {
 
 export default ProjectCarousel;
 
-const posts = [
-  {
-    id: 1,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-  {
-    id: 2,
-    imgUrl: "/images/contact-project.png",
-    tech: "NextJs | React | Bootstrap",
-    title: "Contact List v2",
-    description:
-      "Includes features to add or delete a contact.  Double-click on the list item to view the information card of the contact.",
-    github: "https://github.com/bcsurf2822/contact-list-v2",
-    demo: "https://contact-list-v2-navy.vercel.app/",
-  },
-  {
-    id: 4,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-  {
-    id: 5,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-  {
-    id: 6,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-  {
-    id: 7,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-];
+// const projects = [
+//   {
+//     id: 1,
+//     imgUrl: "/images/weather-project.png",
+//     tech: "React | Redux | NextJS",
+//     title: "Weather Station",
+//     description:
+//       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
+//     github: "https://github.com/bcsurf2822/WeatherStation",
+//     demo: "https://weather-station-one.vercel.app/",
+//   },
+//   {
+//     id: 2,
+//     imgUrl: "/images/contact-project.png",
+//     tech: "NextJs | React | Bootstrap",
+//     title: "Contact List v2",
+//     description:
+//       "Includes features to add or delete a contact.  Double-click on the list item to view the information card of the contact.",
+//     github: "https://github.com/bcsurf2822/contact-list-v2",
+//     demo: "https://contact-list-v2-navy.vercel.app/",
+//   },
+//   {
+//     id: 4,
+//     imgUrl: "/images/weather-project.png",
+//     tech: "React | Redux | NextJS",
+//     title: "Weather Station",
+//     description:
+//       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
+//     github: "https://github.com/bcsurf2822/WeatherStation",
+//     demo: "https://weather-station-one.vercel.app/",
+//   },
+//   {
+//     id: 5,
+//     imgUrl: "/images/weather-project.png",
+//     tech: "React | Redux | NextJS",
+//     title: "Weather Station",
+//     description:
+//       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
+//     github: "https://github.com/bcsurf2822/WeatherStation",
+//     demo: "https://weather-station-one.vercel.app/",
+//   },
+//   {
+//     id: 6,
+//     imgUrl: "/images/weather-project.png",
+//     tech: "React | Redux | NextJS",
+//     title: "Weather Station",
+//     description:
+//       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
+//     github: "https://github.com/bcsurf2822/WeatherStation",
+//     demo: "https://weather-station-one.vercel.app/",
+//   },
+//   {
+//     id: 7,
+//     imgUrl: "/images/weather-project.png",
+//     tech: "React | Redux | NextJS",
+//     title: "Weather Station",
+//     description:
+//       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure",
+//     github: "https://github.com/bcsurf2822/WeatherStation",
+//     demo: "https://weather-station-one.vercel.app/",
+//   },
+// ];

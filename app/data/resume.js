@@ -1,7 +1,7 @@
 export const resumeData = {
   personalInfo: {
     name: "Benjamin Corbett",
-    title: "Full-Stack Web Developer",
+    title: "Full-Stack Software Engineer",
     contact: {
       phone: "(609) 320-7586",
       email: "crystaledgedev22@gmail.com",
@@ -12,13 +12,13 @@ export const resumeData = {
     additionalInfo: "As a developer, my goal is to work on a team that supports and pushes each other to deliver a great end product. When I’m not coding, I enjoy staying current on trends in technology, practicing yoga, surfing, hiking, and spending time with my wife and dog."
   },
   techStack: [
-    "MongoDB", "React", "Redux", "Next.js", "Redux Toolkit", "Node.js", 
-    "Express", "WebSockets", "JavaScript", "REST API", "Jest", 
-    "Mocha", "Chai", "Bootstrap", "Tailwind CSS", "PostgreSQL"
+    "React", "Next.js", "Redux", "Redux Toolkit", "JavaScript",
+    "Node.js", "Express", "MongoDB", "PostgreSQL", "WebSockets", "REST API", "Jest", "Mocha", "Chai",
+    "Tailwind CSS", "Bootstrap"
   ],
   experience: [
     {
-      title: "Weather Station Repository Demo",
+      title: "Weather Station",
       technologies: ["React", "Redux Toolkit", "Bootstrap", "REST API"],
       description: [
         "Integrated the OpenWeather API to dynamically fetch real-time temperature, pressure, and humidity data for any city.",
@@ -28,7 +28,7 @@ export const resumeData = {
       ]
     },
     {
-      title: "Contact List v2 Repository Demo",
+      title: "Contact List v2",
       technologies: ["React", "Next.js", "Bootstrap"],
       description: [
         "Enables users to add, delete, and view contact profiles using pre-generated JSON database IDs.",
@@ -38,7 +38,7 @@ export const resumeData = {
       ]
     },
     {
-      title: "Trello 2.0 Repository",
+      title: "Trello 2.0",
       technologies: ["React", "Redux", "Node.js", "MongoDB", "Tailwind CSS"],
       description: [
         "Includes a login page with a Local JWT strategy, securely authenticating users with pre-generated credentials stored in a MongoDB database.",

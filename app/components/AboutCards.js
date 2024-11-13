@@ -2,11 +2,12 @@
 import { FaCode } from "react-icons/fa";
 import { IoFishOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-import { aboutMeData } from "../data/AboutMe";
+
 import Image from "next/image";
+import { about } from "../data/about";
 
 const AboutCards = () => {
-  const { life,  tech } = aboutMeData;
+  const { life,  tech } = about;
   return (
     <div className="bg-slate-900 w-full mt-10 py-12">
       <div className="flex flex-col justify-around gap-5 w-full max-w-screen-lg mx-auto md:flex-row">

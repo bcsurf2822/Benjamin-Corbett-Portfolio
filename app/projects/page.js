@@ -1,10 +1,10 @@
 import React from 'react'
-import ProjectCarousel from '../components/ProjectCarousel'
+// import ProjectCarousel from '../components/ProjectCarousel'
 
 export default function Projects() {
   return (
     <div>
-      <ProjectCarousel />
+      {/* <ProjectCarousel /> */}
     </div>
   )
 }

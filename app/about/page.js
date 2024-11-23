@@ -4,8 +4,11 @@ import AboutCards from '../components/AboutCards'
 
 export default function About() {
   return (
-    <div>
+    <section
+    id='about'
+    >
+
       <AboutCards />
-    </div>
+    </section>
   )
 }

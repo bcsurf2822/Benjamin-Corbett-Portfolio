@@ -1,38 +1,47 @@
-'use client'
+"use client";
 import { Button } from "@mui/material";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
+import FlipNav from "./NavLink";
+import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
 export const ClearNav = () => {
-  const [selected, setSelected] = useState("");
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const sections = document.querySelectorAll(".section-wrapper");
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 150) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  });
 
-    const options = {
-      threshold: 0.3,
-    };
-
-    const callback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setSelected(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    sections.forEach((section) => observer.observe(section));
-  }, []);
   return (
-    <header className="h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">
-      <p>Projects</p>
-      <Button className="bg-secondary-light rounded-lg text-primary-dark font-bold" onClick={() => window.open("/fake_resume.pdf")}>
+    <motion.nav
+      initial={{
+        opacity: 0,
+        y: "-100%",
+      }}
+      animate={{
+        opacity: 1,
+        y: "0%",
+      }}
+      transition={{
+        duration: 1.25,
+        ease: "easeInOut",
+      }}
+      className={`h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
+    >
+      {" "}
+      <FlipNav />
+      <Button
+        className="bg-secondary-light rounded-lg text-primary-dark font-bold"
+        onClick={() => window.open("/fake_resume.pdf")}
+      >
         My Resume
       </Button>
-    </header>
+    </motion.nav>
   );
 };

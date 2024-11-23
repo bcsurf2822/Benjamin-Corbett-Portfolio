@@ -6,7 +6,9 @@ import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   return (
-    <section className="text-white overflow-hidden bg-slate-900 flex flex-col items-center mt-10   h-[67vh] justify-center px-8 py-24 md:px-12 md:py-32  ">
+    <section
+    id="contact"
+    className="text-white overflow-hidden bg-slate-900 flex flex-col items-center mt-10   h-[67vh] justify-center px-8 py-24 md:px-12 md:py-32  ">
       <h1 className="text-4xl">Lets Connect</h1>
 
       <h1 className="text-2xl text-center">

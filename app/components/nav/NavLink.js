@@ -26,9 +26,6 @@ const NavLeft = () => {
       <Link href="/#projects">
         <NavLink text="projects" />
       </Link>
-      {/* <Link href="/cv">
-        <NavLink text="cv" />
-      </Link> */}
       <Link href="/#contact">
         <NavLink text="contact" />
       </Link>

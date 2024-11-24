@@ -4,8 +4,8 @@ import Reveal from "../util/Reveal";
 
 export default function Hero() {
   return (
-    <div>
-      <section className="text-slat-100 overflow-hidden py-24 md:py-32">
+
+      <section id="home" className="h-[100vh] text-slat-100 overflow-hidden py-24 md:py-32 flex flex-col justify-center">
         <div className="relative">
           <div className="pointer-events-none relative z-10">
             <Reveal>
@@ -40,6 +40,6 @@ export default function Hero() {
           {/* <DotGrid /> */}
         </div>
       </section>
-    </div>
+
   );
 }

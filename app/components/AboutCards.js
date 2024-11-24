@@ -9,7 +9,7 @@ import { about } from "../data/about";
 const AboutCards = () => {
   const { life,  tech } = about;
   return (
-    <div className="bg-slate-900 w-full mt-10 py-12">
+    <div className="h-[100vh]  w-full mt-10 py-12">
       <div className="flex flex-col justify-around gap-5 w-full max-w-screen-lg mx-auto md:flex-row">
         <ShimmerBorderCard title="me." content={life} />
         <ShimmerBorderCard title="tech." content={tech} />

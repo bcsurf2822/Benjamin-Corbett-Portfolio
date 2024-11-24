@@ -17,7 +17,7 @@ const NavLeft = () => {
   return (
     <div className="flex items-center gap-6">
       
-      <Link href="/">
+      <Link href="/#home">
         <NavLink text="home" />
       </Link>
       <Link href="/#about">

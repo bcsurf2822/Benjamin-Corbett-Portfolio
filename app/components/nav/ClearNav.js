@@ -32,7 +32,7 @@ export const ClearNav = () => {
         duration: 1.25,
         ease: "easeInOut",
       }}
-      className={`h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
+      className={`h-[72px]  px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
     >
       {" "}
       <FlipNav />

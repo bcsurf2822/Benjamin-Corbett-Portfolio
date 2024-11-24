@@ -46,7 +46,7 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="bg-slate-900  h-[67vh] py-8 mt-10" ref={ref}>
+    <section className="h-[100vh] py-8 mt-10" ref={ref}>
       <div className="relative overflow-hidden p-4">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">

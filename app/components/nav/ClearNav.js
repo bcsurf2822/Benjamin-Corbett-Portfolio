@@ -1,13 +1,13 @@
 "use client";
-import { Button } from "@mui/material";
-import NavLink from "./NavLink";
-import { useEffect, useState } from "react";
+
+import {  useState } from "react";
 
 import FlipNav from "./NavLink";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
+import NeuFollowButton from "./Button";
 
 export const ClearNav = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -32,16 +32,12 @@ export const ClearNav = () => {
         duration: 1.25,
         ease: "easeInOut",
       }}
-      className={`h-[72px]  px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
+      className={`h-[72px] w-full px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
+
     >
       {" "}
       <FlipNav />
-      <Button
-        className="bg-secondary-light rounded-lg text-primary-dark font-bold"
-        onClick={() => window.open("/fake_resume.pdf")}
-      >
-        My Resume
-      </Button>
+      <NeuFollowButton />
     </motion.nav>
   );
 };

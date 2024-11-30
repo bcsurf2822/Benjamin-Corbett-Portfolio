@@ -10,11 +10,11 @@ const MARGIN = 20;
 const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
   return (
     <div
-      className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 text-slate-50 border-neutral-500"
-      style={{
-        width: CARD_WIDTH,
-        marginRight: MARGIN,
-      }}
+      className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 text-slate-50 border-secondary-content border-2 p-1 rounded-lg mr-2 w-5/6 sm:w-1/2 "
+      // style={{
+      //   width: CARD_WIDTH,
+      //   marginRight: MARGIN,
+      // }}
     >
       <Image
         src={imgUrl}
@@ -28,12 +28,12 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
       <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
         {tech}
       </span>
-      <p className="mt-1.5 text-lg font-medium">{title}</p>
-      <p className="text-sm text-neutral-500">{description}</p>
+      <p className="mt-1.5 text-lg font-medium text-success-content font-bold underline">{title}</p>
+      <p className="text-sm text-success-content ">{description}</p>
       <div className="flex items-center justify center gap-3 mt-2">
         <a href={github} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
-            className="h-9 text-slate-50 cursor-pointer hover:scale-125"
+            className="h-9 text-success-content cursor-pointer hover:scale-125"
             icon={faSquareGithub}
           />
         </a>

@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
 
 const FlipNav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="flex items-center justify-between relative">
+    <nav className="flex items-center  justify-between ">
       <NavLeft />
     </nav>
   );
@@ -15,7 +14,7 @@ const FlipNav = () => {
 
 const NavLeft = () => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-3 sm:gap-6 justfiy-around">
       
       <Link href="/#home">
         <NavLink text="home" />

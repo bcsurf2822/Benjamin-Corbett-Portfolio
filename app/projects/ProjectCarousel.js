@@ -45,16 +45,16 @@ const ProjectCarousel = () => {
 
   return (
     <section className="h-[100vh] py-8 mt-10" ref={ref}>
-      <div className="relative overflow-hidden p-4 ">
-        <div className="mx-auto max-w-6xl border-2 rounded-lg px-5">
+      <div className="relative ">
+        <div className=" max-w-6xl border-2 rounded-lg p-5 bg-border ">
           <div className="flex items-center justify-between">
             <h2 className="mb-4 text-4xl text-primary-dark font-bold">
-              My Projects
+            projects<span className="text-secondary">.</span>
             </h2>
 
             <div className="flex items-center gap-2 ">
               <button
-                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
+                className={`rounded-lg border-[1px] border-neutral-400 bg-success p-1.5 text-2xl transition-opacity ${
                   CAN_SHIFT_LEFT ? "" : "opacity-30"
                 }`}
                 disabled={!CAN_SHIFT_LEFT}
@@ -63,7 +63,7 @@ const ProjectCarousel = () => {
                 <FiArrowLeft />
               </button>
               <button
-                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
+                className={`rounded-lg border-[1px] border-neutral-400 bg-success p-1.5 text-2xl transition-opacity ${
                   CAN_SHIFT_RIGHT ? "" : "opacity-30"
                 }`}
                 disabled={!CAN_SHIFT_RIGHT}

@@ -1,15 +1,13 @@
 "use client";
 import { FaCode } from "react-icons/fa";
-import { IoFishOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-
 import Image from "next/image";
 import { about } from "../data/about";
 
 const AboutCards = () => {
-  const { life,  tech } = about;
+  const { life, tech } = about;
   return (
-    <div className="h-[100vh]  w-full mt-10 py-12">
+    <div className="w-full mt-10 py-12">
       <div className="flex flex-col justify-around gap-5 w-full max-w-screen-lg mx-auto md:flex-row">
         <ShimmerBorderCard title="me." content={life} />
         <ShimmerBorderCard title="tech." content={tech} />
@@ -24,10 +22,10 @@ const ShimmerBorderCard = ({ title, content }) => {
       <div className="relative z-10 min-h-full flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-700 p-8 transition-colors duration-500 group-hover:bg-slate-800">
       {title === "me." ? (
           <Image
-            src="/images/ben-mtn.jpg" // Make sure this path is correct
+            src="/images/ben-mtn.jpg"
             alt="Profile"
-            width={100}  // Equivalent to w-24 in Tailwind
-            height={100} // Equivalent to h-24 in Tailwind
+            width={100}  
+            height={100} 
             className="relative z-10 rounded-full object-cover border-2 border-indigo-500"
             priority
           />

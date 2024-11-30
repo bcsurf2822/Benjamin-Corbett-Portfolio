@@ -1,10 +1,10 @@
 import React from 'react'
-import ProjectCarousel from '../components/ProjectCarousel'
+import ProjectCarousel from './ProjectCarousel'
 
 export default function Projects() {
   return (
     <section
-    id='projects'
+    id='projects' className='pt-8'
     >
       <ProjectCarousel />
     </section>

@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "./components/NavBar";
+
 import { ClearNav } from "./components/nav/ClearNav";
 
 const geistSans = localFont({
@@ -23,12 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-foreground ${geistSans.variable} ${geistMono.variable}
+        className={`bg-background ${geistSans.variable} ${geistMono.variable}
 
         antialiased`}
       >
         <ClearNav />
-        {/* <NavBar /> */}
         {children}
       </body>
     </html>

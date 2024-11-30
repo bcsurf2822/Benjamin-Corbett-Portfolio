@@ -8,10 +8,10 @@ import Projects from "./projects/page";
 const Home = () => {
   return (
     <main>
-      {/* <Hero /> */}
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
     </main>
   );
 };

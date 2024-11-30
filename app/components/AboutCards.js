@@ -18,25 +18,25 @@ const AboutCards = () => {
 
 const ShimmerBorderCard = ({ title, content }) => {
   return (
-    <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-600 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
-      <div className="relative z-10 min-h-full flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-700 p-8 transition-colors duration-500 group-hover:bg-slate-800">
-      {title === "me." ? (
+    <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 p-0.5 transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500 hover:via-purple-500 hover:to-primary">
+      <div className="relative z-10 min-h-full flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-gray-800 p-8 shadow-lg transition-colors duration-500 group-hover:bg-gray-900">
+        {title === "me." ? (
           <Image
             src="/images/ben-mtn.jpg"
             alt="Profile"
-            width={100}  
-            height={100} 
-            className="relative z-10 rounded-full object-cover border-2 border-indigo-500"
+            width={100}
+            height={100}
+            className="relative z-10 rounded-full object-cover border-4 border-primary"
             priority
           />
         ) : (
-          <FaCode className="relative z-10 mb-10 mt-2 rounded-full border-2 border-indigo-500 bg-slate-900 p-4 text-7xl text-indigo-500" />
+          <FaCode className="relative z-10 mb-10 mt-2 rounded-full border-4 border-indigo-500 bg-gray-900 p-4 text-7xl text-primary" />
         )}
 
-        <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
+        <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-indigo-200 group-hover:text-primary">
           {title}
         </h4>
-        <p className="relative z-10 text-slate-400">{content}</p>
+        <p className="relative z-10 text-gray-400 group-hover:text-gray-300">{content}</p>
       </div>
 
       <motion.div
@@ -48,10 +48,11 @@ const ShimmerBorderCard = ({ title, content }) => {
           duration: 3.5,
           ease: "linear",
         }}
-        className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-200 via-indigo-200/0 to-indigo-200 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-400 via-purple-400/0 to-pink-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
       />
     </div>
   );
 };
+
 
 export default AboutCards;

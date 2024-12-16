@@ -21,8 +21,9 @@ const ProjectCarousel = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  const CARD_BUFFER =
-    width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
+  // const CARD_BUFFER =
+  //   width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
+  const CARD_BUFFER = 1
 
   const CAN_SHIFT_LEFT = offset < 0;
 
@@ -82,8 +83,8 @@ const ProjectCarousel = () => {
             }}
             className="flex"
           >
-            {projects.map((post) => {
-              return <ProjectDetails key={post.id} {...post} />;
+            {projects.map((project) => {
+              return <ProjectDetails key={project.id} {...project} />;
             })}
           </motion.div>
         </div>

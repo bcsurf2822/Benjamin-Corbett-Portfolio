@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
     id="contact"
-    className="text-copy overflow-hidden  flex flex-col items-center px-8 py-24 md:px-12 md:py-32  ">
+    className="text-copy overflow-hidden  flex flex-col items-center px-8  py-24 md:px-12 md:py-32  ">
       <h1 className="text-4xl">Lets Connect</h1>
 
       <h1 className="text-2xl text-center">

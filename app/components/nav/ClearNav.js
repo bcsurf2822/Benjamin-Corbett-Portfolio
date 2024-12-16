@@ -1,13 +1,13 @@
 "use client";
 
-import {  useState } from "react";
+import { useState } from "react";
 
 import FlipNav from "./NavLink";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import CVButton from "./CVButton";
 
 export const ClearNav = () => {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -33,7 +33,6 @@ export const ClearNav = () => {
         ease: "easeInOut",
       }}
       className={`h-[72px] w-full px-4 flex items-center justify-around sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
-
     >
       {" "}
       <FlipNav />

@@ -8,16 +8,16 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
   return (
     <div className="relative shrink-0  transition-transform hover:-translate-y-1 text-slate-50 bg-gray-300  max-w-lg p-1 rounded-lg flex flex-col justify-between gap-1 w-full  ">
       <div className="w-full h-[200px] relative">
-      <Image
-  src={imgUrl}
-  alt={`Ben Corbett's ${title} Project`}
-  fill
-  sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw, 33vw"
-  className="object-cover rounded-xl"
-  quality={90}
-/>
+        <Image
+          src={imgUrl}
+          alt={`Ben Corbett's ${title} Project`}
+          fill
+          sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw, 33vw"
+          className="object-cover rounded-xl"
+          quality={90}
+        />
       </div>
-      <span className="rounded-md border-2 border-neutral-700 px-1 py-1 text-xs uppercase text-neutral-700">
+      <span className="rounded-lg  bg-neutral-700 px-1 py-1 text-xs font-bold uppercase text-primary text-center">
         {tech}
       </span>{" "}
       <p className=" text-lg text-success-content font-bold underline ">

@@ -29,4 +29,5 @@ export const projects = [
     github: "https://github.com/chingu-voyages/v52-tier2-team-24",
     demo: "https://isolar.netlify.app/",
   },
+
 ];

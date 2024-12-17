@@ -1,6 +1,8 @@
 "use client";
 
-import Reveal from "../util/Reveal";
+import Reveal from "./util/Reveal";
+
+
 
 export default function Hero() {
   return (

@@ -11,7 +11,7 @@ import ProjectDetails from "./ProjectDetails";
 const CARD_WIDTH = 350;
 const MARGIN = 20;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
-const SCROLL_INCREMENT = CARD_SIZE / 2; 
+const SCROLL_INCREMENT = CARD_SIZE / 2;
 
 const ProjectCarousel = () => {
   const [ref] = useMeasure();
@@ -24,15 +24,15 @@ const ProjectCarousel = () => {
   const CAN_SHIFT_RIGHT =
     Math.abs(offset) <= CARD_SIZE * (projects.length - CARD_BUFFER);
 
-    const shiftLeft = () => {
-      if (!CAN_SHIFT_LEFT) return;
-      setOffset((prev) => prev + SCROLL_INCREMENT);
-    };
-    
-    const shiftRight = () => {
-      if (!CAN_SHIFT_RIGHT) return;
-      setOffset((prev) => prev - SCROLL_INCREMENT);
-    };
+  const shiftLeft = () => {
+    if (!CAN_SHIFT_LEFT) return;
+    setOffset((prev) => prev + SCROLL_INCREMENT);
+  };
+
+  const shiftRight = () => {
+    if (!CAN_SHIFT_RIGHT) return;
+    setOffset((prev) => prev - SCROLL_INCREMENT);
+  };
 
   return (
     <section className="overflow-x-hidden relative" ref={ref}>

@@ -37,8 +37,8 @@ export const projects = [
     title: "Trello 2.5 ",
     description:
       "This is a remake of a project that I worked in while I was in Parsity as part of our Agile project, to get used to Next.js' full-stack features I am currently recreating the project using more modern technologies like Redux Toolkit and MongoDB Atlas.",
-    github: "https://github.com/chingu-voyages/v52-tier2-team-24",
-    demo: "https://isolar.netlify.app/",
+    github: "",
+    demo: "",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const projects = [
     title: "Prism Poker",
     description:
       "My capstone project for Parsity, the purpose for this project is to clone a poker appication.  The user will be able to have their own account and be able to play a round of Texas Hold 'Em Poker against another player.",
-    github: "https://github.com/chingu-voyages/v52-tier2-team-24",
-    demo: "https://isolar.netlify.app/",
+    github: "",
+    demo: "",
   },
 ];

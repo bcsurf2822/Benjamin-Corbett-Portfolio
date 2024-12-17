@@ -27,17 +27,32 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
         <p className="text-sm text-success-content ">{description}</p>
       </div>
       <div className="flex items-center justify center gap-3 mt-2">
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            className="h-9 text-success-content cursor-pointer hover:scale-125"
-            icon={faSquareGithub}
-          />
-        </a>
-        <a href={demo} target="_blank" rel="noopener noreferrer">
-          <Button className="p-1 mb-2" variant="contained">
-            Demo
-          </Button>
-        </a>
+      {github ? (
+  <a href={github} target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon
+      className="h-9 text-success-content cursor-pointer hover:scale-125"
+      icon={faSquareGithub}
+    />
+  </a>
+) : (
+  <span className="invisible">
+    <FontAwesomeIcon icon={faSquareGithub} />
+  </span>
+)}
+
+{demo ? (
+  <a href={demo} target="_blank" rel="noopener noreferrer">
+    <Button className="p-1 mb-2" variant="contained">
+      Demo
+    </Button>
+  </a>
+) : (
+  <span className="invisible">
+    <Button className="pointer-events-none" variant="contained">
+      Demo
+    </Button>
+  </span>
+)}
       </div>
     </div>
   );

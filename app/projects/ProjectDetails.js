@@ -6,23 +6,26 @@ import { Button } from "@mui/material";
 
 const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
   return (
-    <div className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 text-slate-50 border-secondary-content border-2 border-copy max-w-lg p-1 rounded-lg mr-2 w-5/6 sm:w-1/2 ">
+    <div className="relative shrink-0  transition-transform hover:-translate-y-1 text-slate-50 bg-gray-300  max-w-lg p-1 rounded-lg flex flex-col justify-between gap-1 w-full  ">
+      <div className="w-full h-[200px] relative">
       <Image
-        src={imgUrl}
-        alt={`Ben's ${title} Project`}
-        width={600}
-        height={400}
-        quality={85}
-        className="mb-3 rounded-lg object-cover"
-        style={{ objectFit: "cover" }}
-      />
-      <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+  src={imgUrl}
+  alt={`Ben Corbett's ${title} Project`}
+  fill
+  sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw, 33vw"
+  className="object-cover rounded-xl"
+  quality={90}
+/>
+      </div>
+      <span className="rounded-md border-2 border-neutral-700 px-1 py-1 text-xs uppercase text-neutral-700">
         {tech}
-      </span>
-      <p className="mt-1.5 text-lg font-medium text-success-content font-bold underline">
+      </span>{" "}
+      <p className=" text-lg text-success-content font-bold underline ">
         {title}
       </p>
-      <p className="text-sm text-success-content ">{description}</p>
+      <div className="h-1/2">
+        <p className="text-sm text-success-content ">{description}</p>
+      </div>
       <div className="flex items-center justify center gap-3 mt-2">
         <a href={github} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon

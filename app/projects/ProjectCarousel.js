@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
-import { projects } from "../data/projects";
+import { projects } from "./projectData";
 import ProjectDetails from "./ProjectDetails";
 
 const CARD_WIDTH = 350;
@@ -21,9 +21,9 @@ const ProjectCarousel = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  // const CARD_BUFFER =
-  //   width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
-  const CARD_BUFFER = 1
+  const CARD_BUFFER =
+    width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
+  // const CARD_BUFFER = 1
 
   const CAN_SHIFT_LEFT = offset < 0;
 
@@ -45,49 +45,47 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="h-[100vh] py-8 mt-10" ref={ref}>
+    <section className="overflow-x-hidden " ref={ref}>
       <div className="relative ">
-        <div className="  rounded-lg p-5  ">
-          <div className="flex items-center justify-between">
-            <h2 className="mb-4 text-4xl text-primary-dark font-bold">
+        <div className="flex justify-evenly">
+          <h2 className="mb-4 text-3xl text-primary-dark font-bold">
             projects<span className="text-secondary">.</span>
-            </h2>
+          </h2>
 
-            <div className="flex items-center gap-2 ">
-              <button
-                className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_LEFT ? "" : "opacity-30"
-                }`}
-                disabled={!CAN_SHIFT_LEFT}
-                onClick={shiftLeft}
-              >
-                <FiArrowLeft />
-              </button>
-              <button
-                className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_RIGHT ? "" : "opacity-30"
-                }`}
-                disabled={!CAN_SHIFT_RIGHT}
-                onClick={shiftRight}
-              >
-                <FiArrowRight />
-              </button>
-            </div>
+          <div className="flex items-center gap-2 ">
+            <button
+              className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
+                CAN_SHIFT_LEFT ? "" : "opacity-30"
+              }`}
+              disabled={!CAN_SHIFT_LEFT}
+              onClick={shiftLeft}
+            >
+              <FiArrowLeft />
+            </button>
+            <button
+              className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
+                CAN_SHIFT_RIGHT ? "" : "opacity-30"
+              }`}
+              disabled={!CAN_SHIFT_RIGHT}
+              onClick={shiftRight}
+            >
+              <FiArrowRight />
+            </button>
           </div>
-          <motion.div
-            animate={{
-              x: offset,
-            }}
-            transition={{
-              ease: "easeInOut",
-            }}
-            className="flex"
-          >
-            {projects.map((project) => {
-              return <ProjectDetails key={project.id} {...project} />;
-            })}
-          </motion.div>
         </div>
+        <motion.div
+          animate={{
+            x: offset,
+          }}
+          transition={{
+            ease: "easeInOut",
+          }}
+          className="flex gap-1 "
+        >
+          {projects.map((project) => {
+            return <ProjectDetails key={project.id} {...project} />;
+          })}
+        </motion.div>
       </div>
     </section>
   );

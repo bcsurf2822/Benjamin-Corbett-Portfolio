@@ -12,7 +12,7 @@ export const projects = [
   {
     id: 2,
     imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | NextJS",
+    tech: "React | Redux | Next.js",
     title: "Weather Station",
     description:
       " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure.",
@@ -22,7 +22,7 @@ export const projects = [
   {
     id: 3,
     imgUrl: "/images/contact-project.png",
-    tech: "NextJs | React | Bootstrap",
+    tech: "Next.js | React | Bootstrap",
     title: "Contact List v2",
     description:
       "Includes features to add or delete a contact. Double-click on the list item to view the information card of the contact.",

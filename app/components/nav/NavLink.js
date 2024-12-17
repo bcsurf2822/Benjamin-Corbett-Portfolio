@@ -20,7 +20,7 @@ const NavLink = ({ href, text }) => {
   return (
     <Link
       href={href}
-      className="block h-[30px] overflow-hidden text-sm"
+      className="block h-[30px] overflow-hidden text-sm font-bold"
       rel="nofollow"
     >
       <motion.div whileHover={{ y: -30 }}>

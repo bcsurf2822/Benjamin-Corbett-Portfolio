@@ -6,7 +6,7 @@ const CVButton = () => {
 
 
 
-      <button    onClick={() => window.open("./docs/corbett-cv.pdf")} className="group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700">
+      <button    onClick={() => window.open("./docs/corbett-cv.pdf")} className="group flex h-8 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700">
 
         <span className="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white">
 
@@ -14,7 +14,7 @@ const CVButton = () => {
 
         </span>
 
-        <span>CV</span>
+        <span className="text-sm text-primary font-bold">CV</span>
 
       </button>
 

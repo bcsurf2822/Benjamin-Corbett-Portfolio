@@ -13,7 +13,7 @@ const MARGIN = 20;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
 
 const ProjectCarousel = () => {
-  const [ref, { width }] = useMeasure();
+  const [ref] = useMeasure();
   const [offset, setOffset] = useState(0);
 
   // Always 1 card at a time for simplicity

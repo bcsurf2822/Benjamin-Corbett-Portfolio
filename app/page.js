@@ -1,18 +1,19 @@
-
-
 import About from "./about/page";
-import Hero from "./components/Hero";
 
 import Contact from "./contact/page";
+import HeroPage from "./hero/page";
 import Projects from "./projects/page";
 
 const Home = () => {
   return (
-    <main >
-      {/* <Hero /> */}
-      {/* <About /> */}
+    <main>
+      <HeroPage />
+
+      <About />
+
       <Projects />
-      {/* <Contact /> */}
+
+      <Contact />
     </main>
   );
 };

@@ -17,7 +17,7 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
           quality={90}
         />
       </div>
-      <span className="rounded-lg  bg-neutral-700 px-1 py-1 text-xs font-bold uppercase text-primary text-center">
+      <span className="rounded-lg  bg-neutral-700 px-1 py-1 text-xs font-bold  text-primary text-center">
         {tech}
       </span>{" "}
       <p className=" text-lg text-success-content font-bold underline ">

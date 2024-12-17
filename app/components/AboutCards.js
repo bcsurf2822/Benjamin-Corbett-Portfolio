@@ -7,11 +7,9 @@ import { about } from "../data/about";
 const AboutCards = () => {
   const { life, tech } = about;
   return (
-    <div className="w-full mt-10 py-12">
-      <div className="flex flex-col justify-around gap-5 w-full max-w-screen-lg mx-auto md:flex-row">
-        <ShimmerBorderCard title="me." content={life} />
-        <ShimmerBorderCard title="tech." content={tech} />
-      </div>
+    <div className="flex flex-col gap-3 md:flex-row  w-full max-w-screen-lg px-2 md:justify-center md:mx-auto">
+      <ShimmerBorderCard title="me." content={life} />
+      <ShimmerBorderCard title="tech." content={tech} />
     </div>
   );
 };
@@ -36,7 +34,9 @@ const ShimmerBorderCard = ({ title, content }) => {
         <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-indigo-200 group-hover:text-primary">
           {title}
         </h4>
-        <p className="relative z-10 text-gray-400 group-hover:text-gray-300">{content}</p>
+        <p className="relative z-10 text-gray-400 group-hover:text-gray-300">
+          {content}
+        </p>
       </div>
 
       <motion.div
@@ -53,6 +53,5 @@ const ShimmerBorderCard = ({ title, content }) => {
     </div>
   );
 };
-
 
 export default AboutCards;

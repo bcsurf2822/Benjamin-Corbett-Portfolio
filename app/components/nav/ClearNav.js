@@ -1,10 +1,6 @@
 "use client";
-
 import { useState } from "react";
-
-import FlipNav from "./NavLink";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
-import CVButton from "./CVButton";
 import NavContent from "./NavLink";
 
 export const ClearNav = () => {
@@ -33,7 +29,7 @@ export const ClearNav = () => {
         duration: 1.25,
         ease: "easeInOut",
       }}
-      className={`h-[72px] w-full flex justify-evenly sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md`}
+      className="h-[72px] w-full flex justify-evenly sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md "
     >
       {" "}
       <NavContent />

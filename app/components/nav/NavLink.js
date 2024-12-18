@@ -6,10 +6,10 @@ import CVButton from "./CVButton";
 
 const NavContent = () => {
   return (
-    <nav className="flex justify-evenly items-center  w-full gap-3 ">
+    <nav className="flex justify-evenly items-center  w-full gap-3">
       <NavLink href="/#home" text="home" />
       <NavLink href="/#about" text="about" />
-      <NavLink href="/#projects" text="projects" />
+      <NavLink href="/#project" text="projects" />
       <NavLink href="/#contact" text="contact" />
       <CVButton />
     </nav>

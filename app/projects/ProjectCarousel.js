@@ -35,7 +35,7 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section className="overflow-x-hidden relative" ref={ref}>
+    <section id="project" className="overflow-x-hidden relative" ref={ref}>
       {/* PROJECTS TITLE and ARROW BUTTONS */}
       <div className="flex justify-evenly mb-4">
         <h2 className="text-3xl text-primary-dark font-bold">

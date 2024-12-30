@@ -32,12 +32,12 @@ export const projects = [
 
   {
     id: 4,
-    imgUrl: "/images/construction.png",
-    tech: "React | Next.js | MongoDB | Tailwind Css",
+    imgUrl: "/images/trello-project.png",
+    tech: "React | Next.js | MongoDB | React Query | Tailwind Css",
     title: "Trello 2.5 ",
     description:
       "This is a remake of a project that I worked in while I was in Parsity as part of our Agile project, to get used to Next.js' full-stack features I am currently recreating the project using more modern technologies like Redux Toolkit and MongoDB Atlas.",
-    github: "",
+    github: "https://github.com/bcsurf2822/trello-2.5",
     demo: "",
   },
   {

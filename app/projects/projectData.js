@@ -33,12 +33,12 @@ export const projects = [
   {
     id: 4,
     imgUrl: "/images/trello-project.png",
-    tech: "React | Next.js | MongoDB | React Query | Tailwind Css",
+    tech: "React | Next.js | MongoDB | Tanstack Query | NextAuth | Tailwind Css",
     title: "Trello 2.5 ",
     description:
-      "This is a remake of a project that I worked in while I was in Parsity as part of our Agile project, to get used to Next.js' full-stack features I am currently recreating the project using more modern technologies like Redux Toolkit and MongoDB Atlas.",
+      "Trello 2.5 is a clone of the Trello platform that I rebuilt from the ground up as an update to my original Trello 2 project.  Users have the ability to use Google to login or login as a guest.  Once logged in, users can create boards, lists, and cards to organize tasks effectively.",
     github: "https://github.com/bcsurf2822/trello-2.5",
-    demo: "",
+    demo: "https://trello-2-5.vercel.app/",
   },
   {
     id: 5,

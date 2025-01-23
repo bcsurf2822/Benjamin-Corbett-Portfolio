@@ -17,7 +17,7 @@ const ProjectCarousel = () => {
   const [ref] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  // Always 1 card at a time for simplicity
+
   const CARD_BUFFER = 1;
 
   const CAN_SHIFT_LEFT = offset < 0;

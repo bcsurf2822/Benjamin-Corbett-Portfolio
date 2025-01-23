@@ -11,6 +11,16 @@ export const projects = [
   },
   {
     id: 2,
+    imgUrl: "/images/trello-project.png",
+    tech: "React | Next.js | MongoDB | Tanstack Query | NextAuth | Tailwind Css",
+    title: "Trello 2.5 ",
+    description:
+      "Trello 2.5 is a clone of the Trello platform that I rebuilt from the ground up as an update to my original Trello 2 project.  Users have the ability to use Google to login or login as a guest.  Once logged in, users can create boards, lists, and cards to organize tasks effectively.",
+    github: "https://github.com/bcsurf2822/trello-2.5",
+    demo: "https://trello-2-5.vercel.app/",
+  },
+  {
+    id: 3,
     imgUrl: "/images/weather-project.png",
     tech: "React | Redux | Next.js",
     title: "Weather Station",
@@ -20,7 +30,7 @@ export const projects = [
     demo: "https://weather-station-one.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     imgUrl: "/images/contact-project.png",
     tech: "Next.js | React | Bootstrap",
     title: "Contact List v2",
@@ -31,23 +41,13 @@ export const projects = [
   },
 
   {
-    id: 4,
-    imgUrl: "/images/trello-project.png",
-    tech: "React | Next.js | MongoDB | Tanstack Query | NextAuth | Tailwind Css",
-    title: "Trello 2.5 ",
-    description:
-      "Trello 2.5 is a clone of the Trello platform that I rebuilt from the ground up as an update to my original Trello 2 project.  Users have the ability to use Google to login or login as a guest.  Once logged in, users can create boards, lists, and cards to organize tasks effectively.",
-    github: "https://github.com/bcsurf2822/trello-2.5",
-    demo: "https://trello-2-5.vercel.app/",
-  },
-  {
     id: 5,
     imgUrl: "/images/construction.png",
-    tech: "React | Next.js | MongoDB | Tailwind Css | Websockets",
-    title: "Prism Poker",
+    tech: "React | Vite | MongoDB | Tailwind Css | Websockets",
+    title: "PKR Poker",
     description:
-      "My capstone project for Parsity, the purpose for this project is to clone a poker appication.  The user will be able to have their own account and be able to play a round of Texas Hold 'Em Poker against another player.",
-    github: "",
-    demo: "",
+      "The purpose for this project is to clone a poker appication.  The user will be able to have their own account and be able to play a round of Texas Hold 'Em Poker against another player. Feel free to track my progress!",
+    github: "https://github.com/bcsurf2822/prismPoker",
+    demo: "https://pkrpoker.netlify.app/",
   },
 ];

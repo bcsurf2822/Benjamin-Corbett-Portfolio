@@ -16,7 +16,6 @@ const tech = [
 ];
 
 const AboutCards = () => {
-  console.log("life", life);
   return (
     <div className="flex flex-col gap-1 md:flex-row w-full max-w-screen-lg px-2 md:justify-center md:mx-auto">
       <ShimmerCard title="about." content={life} />
@@ -29,14 +28,11 @@ const ShimmerCard = ({ content, title }) => {
   return (
     <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 p-0.5 transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500 hover:via-purple-500 hover:to-primary">
       <div className="relative z-10 min-h-full flex flex-col items-center justify-start overflow-hidden rounded-lg bg-gray-700 p-8 shadow-lg transition-colors duration-500 ">
-        {/* Title Section - sticky at the top */}
         <div className="w-full sticky top-0 bg-gray-700 pb-2">
           <h4 className="relative z-10 text-3xl font-bold text-indigo-200 group-hover:text-primary">
             {title}
           </h4>
         </div>
-
-        {/* Content Section */}
         <div className="relative z-10 text-gray-400 group-hover:text-gray-300 mt-4">
           {content.map((paragraph, i) => (
             <p

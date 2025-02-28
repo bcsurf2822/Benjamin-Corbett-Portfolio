@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
-import { projects } from "./projectData";
+import { projects } from "../data/projectData";
 import ProjectDetails from "./ProjectDetails";
 
 const CARD_WIDTH = 350;
@@ -35,7 +35,7 @@ const ProjectCarousel = () => {
   };
 
   return (
-    <section id="project" className="overflow-x-hidden relative" ref={ref}>
+    <section className="overflow-x-hidden relative" ref={ref}>
       {/* PROJECTS TITLE and ARROW BUTTONS */}
       <div className="flex justify-evenly mb-4">
         <h2 className="text-3xl text-primary-dark font-bold">

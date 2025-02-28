@@ -16,11 +16,10 @@ const ProjectCarousel = () => {
   const leftIntervalRef = useRef(null);
   const rightIntervalRef = useRef(null);
 
-  // State to track if carousel can scroll left/right
+
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Update scroll state by reading the carousel's scroll position
   const updateScrollState = () => {
     const carousel = carouselRef.current;
     if (carousel) {
@@ -38,8 +37,8 @@ const ProjectCarousel = () => {
     return () => carousel.removeEventListener("scroll", updateScrollState);
   }, []);
 
-  // Increase scrolling speed by using 5 pixels per tick (2.5x faster than before)
-  const SCROLL_SPEED = 5;
+
+  const SCROLL_SPEED = 10;
 
   // Start scrolling left continuously
   const startScrollLeft = () => {
@@ -108,7 +107,6 @@ const ProjectCarousel = () => {
         className="flex gap-1 overflow-x-auto scroll-smooth"
       >
         {projects.map((project) => (
-        
           <ProjectDetails key={project.id} {...project} />
         ))}
       </div>

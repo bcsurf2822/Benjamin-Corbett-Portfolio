@@ -1,92 +1,51 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { about } from "../data/about";
+
+const life = [
+  "I am a full-stack developer who enjoys practicing my current skill set by building responsive and scalable applications.",
+  "Outside of tech, I enjoy going to the beach, surfing, skateboarding, spending time with my wife and dog, cooking, hiking, traveling, and doing DIY projects around the house.",
+  "Before getting into software, I was a commercial fisherman for 12 years, fishing out of many ports in the country including Alaska, Massachusetts and California.",
+  "My time there has taught me countless skills such as leadership, responsibility, and the benefits of hard work.",
+  "I've had the privelage to work and laugh with some of the best people and have expereienced so much during our trips at sea.",
+];
+
+const tech = [
+  "While recovering from an injury sustained on the boat I took my passion for technology to the next level by using online resources to teach myself HTML, JavaScript, and CSS. In 2023 I joined Parsity, an online coding bootcamp, where I built a strong foundation in React, Redux, MongoDB, Express, and Node.",
+  "Since finishing my course work, I have been practicing with those technologies on a daily basis while working to master my skills in NextJS.  My current interests are TypeScript, AI integration, and Amazon Web Services(AWS).  My goal is to work alongside a great team at a company where I can continue to grow as a person and developer.",
+];
 
 const AboutCards = () => {
-  const { life, tech } = about;
+  console.log("life", life);
   return (
     <div className="flex flex-col gap-1 md:flex-row w-full max-w-screen-lg px-2 md:justify-center md:mx-auto">
-      <ShimmerBorderCardMe content={life} />
-      <ShimmerBorderCardTech content={tech} />
+      <ShimmerCard title="about." content={life} />
+      <ShimmerCard title="tech." content={tech} />
     </div>
   );
 };
 
-const ShimmerBorderCardMe = ({ content }) => {
+const ShimmerCard = ({ content, title }) => {
   return (
     <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 p-0.5 transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500 hover:via-purple-500 hover:to-primary">
-      <div className="relative z-10 min-h-full flex flex-col items-center justify-center overflow-hidden rounded-lg bg-gray-800 p-8 shadow-lg transition-colors duration-500 group-hover:bg-gray-900">
-        {/* Image/Logo Section */}
-        <div className="mb-4 w-[100px] h-[100px] flex items-start justify-center">
-          <Image
-            src="/images/ben-mtn.jpg"
-            alt="Profile"
-            width={100}
-            height={100}
-            className="block relative z-10 rounded-full object-cover object-center border-4 border-indigo-500"
-            priority
-          />
-        </div>
-
-        {/* Title Section */}
-        <div className="mb-4">
-          <h4 className="relative z-10 w-full text-3xl font-bold text-indigo-200 group-hover:text-primary">
-            me.
+      <div className="relative z-10 min-h-full flex flex-col items-center justify-start overflow-hidden rounded-lg bg-gray-700 p-8 shadow-lg transition-colors duration-500 ">
+        {/* Title Section - sticky at the top */}
+        <div className="w-full sticky top-0 bg-gray-700 pb-2">
+          <h4 className="relative z-10 text-3xl font-bold text-indigo-200 group-hover:text-primary">
+            {title}
           </h4>
         </div>
 
         {/* Content Section */}
-        <div>
-          <p className="relative z-10 text-gray-400 group-hover:text-gray-300">
-            {content}
-          </p>
-        </div>
-      </div>
-
-      <motion.div
-        initial={{ rotate: "0deg" }}
-        animate={{ rotate: "360deg" }}
-        style={{ scale: 1.75 }}
-        transition={{
-          repeat: Infinity,
-          duration: 3.5,
-          ease: "linear",
-        }}
-        className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-400 via-purple-400/0 to-pink-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-      />
-    </div>
-  );
-};
-
-const ShimmerBorderCardTech = ({ content }) => {
-  return (
-    <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 p-0.5 transition-all duration-500 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500 hover:via-purple-500 hover:to-primary">
-      <div className="relative z-10 min-h-full flex flex-col items-center justify-center overflow-hidden rounded-lg bg-gray-800 p-8 shadow-lg transition-colors duration-500 group-hover:bg-gray-900">
-        {/* Image/Logo Section */}
-        <div className="mb-4 w-[100px] h-[100px] flex items-start justify-center">
-          <Image
-            src="/images/ben-mtn.jpg"
-            alt="Tech Logo"
-            width={100}
-            height={100}
-            className="block relative z-10 rounded-full object-cover object-center border-4 border-indigo-500"
-            priority
-          />
-        </div>
-
-        {/* Title Section */}
-        <div className="mb-4">
-          <h4 className="relative z-10 w-full text-3xl font-bold text-indigo-200 group-hover:text-primary">
-            tech.
-          </h4>
-        </div>
-
-        {/* Content Section */}
-        <div>
-          <p className="relative z-10 text-gray-400 group-hover:text-gray-300">
-            {content}
-          </p>
+        <div className="relative z-10 text-gray-400 group-hover:text-gray-300 mt-4">
+          {content.map((paragraph, i) => (
+            <p
+              key={i}
+              className="mb-4 first-word:font-bold first-letter:text-xl"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
 

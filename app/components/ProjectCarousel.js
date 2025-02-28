@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
@@ -11,31 +10,69 @@ import ProjectDetails from "./ProjectDetails";
 const CARD_WIDTH = 350;
 const MARGIN = 20;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
-const SCROLL_INCREMENT = CARD_SIZE / 2;
 
 const ProjectCarousel = () => {
-  const [ref] = useMeasure();
-  const [offset, setOffset] = useState(0);
+  const carouselRef = useRef(null);
+  const leftIntervalRef = useRef(null);
+  const rightIntervalRef = useRef(null);
 
+  // State to track if carousel can scroll left/right
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const CARD_BUFFER = 1;
-
-  const CAN_SHIFT_LEFT = offset < 0;
-  const CAN_SHIFT_RIGHT =
-    Math.abs(offset) <= CARD_SIZE * (projects.length - CARD_BUFFER);
-
-  const shiftLeft = () => {
-    if (!CAN_SHIFT_LEFT) return;
-    setOffset((prev) => prev + SCROLL_INCREMENT);
+  // Update scroll state by reading the carousel's scroll position
+  const updateScrollState = () => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const { scrollLeft, scrollWidth, offsetWidth } = carousel;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + offsetWidth < scrollWidth);
+    }
   };
 
-  const shiftRight = () => {
-    if (!CAN_SHIFT_RIGHT) return;
-    setOffset((prev) => prev - SCROLL_INCREMENT);
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    updateScrollState();
+    carousel.addEventListener("scroll", updateScrollState);
+    return () => carousel.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  // Increase scrolling speed by using 5 pixels per tick (2.5x faster than before)
+  const SCROLL_SPEED = 5;
+
+  // Start scrolling left continuously
+  const startScrollLeft = () => {
+    leftIntervalRef.current = setInterval(() => {
+      if (carouselRef.current) {
+        carouselRef.current.scrollLeft -= SCROLL_SPEED;
+      }
+    }, 16); // roughly 60fps
   };
+
+  // Stop scrolling left
+  const stopScrollLeft = () => {
+    clearInterval(leftIntervalRef.current);
+  };
+
+  // Start scrolling right continuously
+  const startScrollRight = () => {
+    rightIntervalRef.current = setInterval(() => {
+      if (carouselRef.current) {
+        carouselRef.current.scrollLeft += SCROLL_SPEED;
+      }
+    }, 16);
+  };
+
+  // Stop scrolling right
+  const stopScrollRight = () => {
+    clearInterval(rightIntervalRef.current);
+  };
+
+  const [measureRef] = useMeasure();
 
   return (
-    <section className="overflow-x-hidden relative" ref={ref}>
+    <section className="relative" ref={measureRef}>
       {/* PROJECTS TITLE and ARROW BUTTONS */}
       <div className="flex justify-evenly mb-4">
         <h2 className="text-3xl text-primary-dark font-bold">
@@ -44,34 +81,37 @@ const ProjectCarousel = () => {
         {/* BUTTONS */}
         <div className="flex items-center gap-2">
           <button
-            className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
-              CAN_SHIFT_LEFT ? "" : "opacity-30"
+            className={`rounded-lg border border-neutral-700 bg-primary p-1.5 text-2xl transition-transform duration-300 hover:scale-110 ${
+              canScrollLeft ? "" : "opacity-30 cursor-not-allowed"
             }`}
-            disabled={!CAN_SHIFT_LEFT}
-            onClick={shiftLeft}
+            disabled={!canScrollLeft}
+            onMouseEnter={startScrollLeft}
+            onMouseLeave={stopScrollLeft}
           >
             <FiArrowLeft />
           </button>
           <button
-            className={`rounded-lg border-[1px] border-neutral-700 bg-success p-1.5 text-2xl transition-opacity ${
-              CAN_SHIFT_RIGHT ? "" : "opacity-30"
+            className={`rounded-lg border border-neutral-700 bg-primary p-1.5 text-2xl transition-transform duration-300 hover:scale-110 ${
+              canScrollRight ? "" : "opacity-30 cursor-not-allowed"
             }`}
-            disabled={!CAN_SHIFT_RIGHT}
-            onClick={shiftRight}
+            disabled={!canScrollRight}
+            onMouseEnter={startScrollRight}
+            onMouseLeave={stopScrollRight}
           >
             <FiArrowRight />
           </button>
         </div>
       </div>
-      <motion.div
-        animate={{ x: offset }}
-        transition={{ ease: "easeInOut" }}
-        className="flex gap-1"
+      {/* Make this container scrollable */}
+      <div
+        ref={carouselRef}
+        className="flex gap-1 overflow-x-auto scroll-smooth"
       >
         {projects.map((project) => (
+        
           <ProjectDetails key={project.id} {...project} />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

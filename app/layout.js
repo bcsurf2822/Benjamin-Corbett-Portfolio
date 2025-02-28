@@ -28,7 +28,10 @@ export default function RootLayout({ children }) {
         antialiased`}
       >
         <ClearNav />
+        <div className="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth">
         {children}
+        </div>
+     
         <Analytics />
       </body>
     </html>

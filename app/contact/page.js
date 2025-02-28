@@ -7,13 +7,14 @@ import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Contact() {
   return (
     <section
-    id="contact"
-    className="text-copy overflow-hidden  flex flex-col items-center px-8  py-24 md:px-12 md:py-32  ">
+      id="contact"
+      className="text-copy overflow-hidden  flex flex-col items-center justify-center scroll-mt-[80px] h-[100vh] bg-neutral-50  md:px-12 md:py-32  "
+    >
       <h1 className="text-4xl">Lets Connect</h1>
 
       <h1 className="text-2xl text-center">
         to get started on your next project or design a site to{" "}
-        <span className="text-4xl uppercase">build</span> your business
+        <span className="text-4xl uppercase">build</span> your business!
       </h1>
 
       <div className="flex gap-6 mt-4">
@@ -30,6 +31,7 @@ export default function Contact() {
           icon={faCalendarDays}
         />
       </div>
+      <p>Email: crystaledgedev22@gmail.com</p>
     </section>
   );
 }

@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
       >
         <ClearNav />
         <div className="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth">
-        {children}
+          {children}
         </div>
-     
+
         <Analytics />
       </body>
     </html>

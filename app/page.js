@@ -6,12 +6,12 @@ import Projects from "./projects/page";
 
 const Home = () => {
   return (
-    <main >
+    <main>
       <HeroPage />
 
       <About />
 
-      <Projects  />
+      <Projects />
 
       <Contact />
     </main>

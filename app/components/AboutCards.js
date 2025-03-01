@@ -29,7 +29,8 @@ const ShimmerCard = ({ content, title }) => {
       <div className="relative z-10 min-h-full flex flex-col items-center justify-start overflow-hidden rounded-lg bg-white p-6 shadow-md transition-colors duration-300">
         <div className="w-full sticky top-0 bg-white pb-2 border-b border-gray-100">
           <h4 className="relative z-10 text-3xl font-bold text-primary-dark">
-            {title}<span className="text-secondary">.</span>
+            {title}
+            <span className="text-secondary">.</span>
           </h4>
         </div>
         <div className="relative z-10 text-gray-600 group-hover:text-gray-800 mt-4 w-full">

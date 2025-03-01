@@ -5,7 +5,10 @@ import { projects } from "../data/projectData";
 import ProjectDetails from "./ProjectDetails";
 import MobileProjectCards from "./MobileProjects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronLeft, faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleChevronLeft,
+  faCircleChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCarousel = () => {
   const carouselRef = useRef(null);
@@ -13,7 +16,6 @@ const ProjectCarousel = () => {
   const rightIntervalRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-  // Track which project is expanded (if any)
   const [expandedProjectId, setExpandedProjectId] = useState(null);
 
   const updateScrollState = () => {
@@ -33,7 +35,6 @@ const ProjectCarousel = () => {
     return () => carousel.removeEventListener("scroll", updateScrollState);
   }, []);
 
-  // Scroll settings
   const SCROLL_SPEED = 20;
   const SCROLL_DISTANCE = 400;
 
@@ -61,12 +62,11 @@ const ProjectCarousel = () => {
     clearInterval(rightIntervalRef.current);
   };
 
-  // One-time scroll functions for click events
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: -SCROLL_DISTANCE,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -75,12 +75,11 @@ const ProjectCarousel = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: SCROLL_DISTANCE,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
-  // Handle toggling project expansion
   const handleToggleProject = (projectId) => {
     setExpandedProjectId(expandedProjectId === projectId ? null : projectId);
   };
@@ -89,14 +88,12 @@ const ProjectCarousel = () => {
 
   return (
     <div className="w-full" ref={measureRef}>
-      {/* Title Section - Visible on both desktop and mobile */}
       <div className="text-center py-6 md:py-8">
         <h2 className="text-4xl md:text-5xl text-primary-dark font-bold inline-block relative">
           projects<span className="text-secondary">.</span>
         </h2>
       </div>
-      
-      {/* Desktop Layout */}
+
       <div className="hidden md:block">
         <div className="flex justify-end px-8 mb-4">
           <div className="flex items-center gap-4">
@@ -114,7 +111,9 @@ const ProjectCarousel = () => {
                 icon={faCircleChevronLeft}
                 className="text-3xl text-primary"
                 style={{
-                  filter: canScrollLeft ? 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))' : 'none'
+                  filter: canScrollLeft
+                    ? "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))"
+                    : "none",
                 }}
               />
             </button>
@@ -132,7 +131,9 @@ const ProjectCarousel = () => {
                 icon={faCircleChevronRight}
                 className="text-3xl text-primary"
                 style={{
-                  filter: canScrollRight ? 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))' : 'none'
+                  filter: canScrollRight
+                    ? "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))"
+                    : "none",
                 }}
               />
             </button>
@@ -142,37 +143,36 @@ const ProjectCarousel = () => {
           ref={carouselRef}
           className="flex gap-4 overflow-x-auto scroll-smooth px-8 pb-4 carousel-container"
           style={{
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent'
+            scrollbarWidth: "thin",
+            scrollbarColor: "rgba(156, 163, 175, 0.5) transparent",
           }}
         >
           {projects.map((project) => (
             <ProjectDetails key={project.id} {...project} />
           ))}
         </div>
-        
-        {/* Add this CSS to make scrollbar always visible */}
+
         <style jsx global>{`
           .carousel-container::-webkit-scrollbar {
             height: 8px;
             display: block;
           }
-          
+
           .carousel-container::-webkit-scrollbar-track {
             background: rgba(243, 244, 246, 0.5);
             border-radius: 20px;
           }
-          
+
           .carousel-container::-webkit-scrollbar-thumb {
             background-color: rgba(156, 163, 175, 0.5);
             border-radius: 20px;
             border: 2px solid rgba(243, 244, 246, 0.5);
           }
-          
+
           .carousel-container::-webkit-scrollbar-thumb:hover {
             background-color: rgba(156, 163, 175, 0.8);
           }
-          
+
           /* For Firefox */
           .carousel-container {
             scrollbar-width: thin;
@@ -181,13 +181,12 @@ const ProjectCarousel = () => {
         `}</style>
       </div>
 
-      {/* Mobile Layout */}
       <div className="block md:hidden">
         <div className="px-6 pb-12">
           {projects.map((project) => (
-            <MobileProjectCards 
-              key={project.id} 
-              project={project} 
+            <MobileProjectCards
+              key={project.id}
+              project={project}
               isExpanded={expandedProjectId === project.id}
               onToggle={() => handleToggleProject(project.id)}
             />

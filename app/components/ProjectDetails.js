@@ -5,12 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@mui/material";
 
 const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
-  // Split description into paragraphs for better readability
-  const paragraphs = description.split('. ').filter(Boolean);
-  
+  const paragraphs = description.split(". ").filter(Boolean);
+
   return (
     <div className="relative shrink-0 w-[340px] h-[500px] bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      {/* Image Container */}
       <div className="w-full h-[180px] relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-10"></div>
         <Image
@@ -22,37 +20,34 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
           quality={90}
         />
       </div>
-      
-      {/* Content Container */}
+
       <div className="p-5 flex flex-col h-[320px]">
-        {/* Technology tag positioned below the image */}
-        <div className="mb-2">
-          <span className="inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-medium text-white shadow-sm">
+        <div className="flex justify-center mb-3">
+          <span className="inline-block rounded-full bg-gray-700 px-3 py-1 text-xs font-medium text-white shadow-sm">
             {tech}
           </span>
         </div>
-        
+
         <h3 className="text-xl font-bold text-primary-dark mb-3 line-clamp-1">
           {title}
         </h3>
-        
+
         <div className="flex-grow overflow-y-auto pr-1 custom-scrollbar">
           <div className="text-sm text-gray-600 space-y-2">
             {paragraphs.map((paragraph, index) => (
               <p key={index}>
-                {paragraph + (index < paragraphs.length - 1 ? '.' : '')}
+                {paragraph + (index < paragraphs.length - 1 ? "." : "")}
               </p>
             ))}
           </div>
         </div>
-        
-        {/* Action buttons with updated button style */}
+
         <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
           <div className="flex gap-3 items-center">
             {github ? (
-              <a 
-                href={github} 
-                target="_blank" 
+              <a
+                href={github}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block z-20"
                 aria-label="View GitHub Repository"
@@ -66,15 +61,15 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
               <div className="w-8"></div>
             )}
           </div>
-          
+
           {demo ? (
-            <a 
-              href={demo} 
-              target="_blank" 
+            <a
+              href={demo}
+              target="_blank"
               rel="noopener noreferrer"
               className="block z-20"
             >
-              <Button 
+              <Button
                 className="bg-primary hover:bg-primary-dark transition-all duration-300 normal-case text-sm"
                 variant="contained"
                 size="small"
@@ -87,26 +82,25 @@ const ProjectDetails = ({ imgUrl, tech, title, github, demo, description }) => {
           )}
         </div>
       </div>
-      
-      {/* Add custom scrollbar style */}
+
       <style jsx global>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 4px;
         }
-        
+
         .custom-scrollbar::-webkit-scrollbar-track {
           background: rgba(243, 244, 246, 0.5);
         }
-        
+
         .custom-scrollbar::-webkit-scrollbar-thumb {
           background-color: rgba(156, 163, 175, 0.5);
           border-radius: 10px;
         }
-        
+
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background-color: rgba(156, 163, 175, 0.8);
         }
-        
+
         /* For Firefox */
         .custom-scrollbar {
           scrollbar-width: thin;

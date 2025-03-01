@@ -20,6 +20,7 @@ const AboutCards = () => {
     <div className="flex flex-col gap-1 md:flex-row w-full max-w-screen-lg px-2 md:justify-center md:mx-auto">
       <ShimmerCard title="about." content={life} />
       <ShimmerCard title="tech." content={tech} />
+      
     </div>
   );
 };

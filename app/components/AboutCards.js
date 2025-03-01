@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const life = [
   "I am a full-stack developer who enjoys practicing my current skill set by building responsive and scalable applications.",
@@ -17,7 +16,7 @@ const tech = [
 
 const AboutCards = () => {
   return (
-    <div className="flex flex-col gap-1 md:flex-row w-full max-w-screen-lg px-2 md:justify-center md:mx-auto">
+    <div className="flex flex-col gap-1 md:flex-row w-full max-w-screen-lg px-2 md:justify-center md:mx-auto ">
       <ShimmerCard title="about." content={life} />
       <ShimmerCard title="tech." content={tech} />
       

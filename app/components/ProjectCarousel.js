@@ -7,10 +7,6 @@ import useMeasure from "react-use-measure";
 import { projects } from "../data/projectData";
 import ProjectDetails from "./ProjectDetails";
 
-const CARD_WIDTH = 350;
-const MARGIN = 20;
-const CARD_SIZE = CARD_WIDTH + MARGIN;
-
 const ProjectCarousel = () => {
   const carouselRef = useRef(null);
   const leftIntervalRef = useRef(null);
@@ -40,21 +36,20 @@ const ProjectCarousel = () => {
 
   const SCROLL_SPEED = 10;
 
-  // Start scrolling left continuously
+
   const startScrollLeft = () => {
     leftIntervalRef.current = setInterval(() => {
       if (carouselRef.current) {
         carouselRef.current.scrollLeft -= SCROLL_SPEED;
       }
-    }, 16); // roughly 60fps
+    }, 16); 
   };
 
-  // Stop scrolling left
+ 
   const stopScrollLeft = () => {
     clearInterval(leftIntervalRef.current);
   };
 
-  // Start scrolling right continuously
   const startScrollRight = () => {
     rightIntervalRef.current = setInterval(() => {
       if (carouselRef.current) {
@@ -63,7 +58,7 @@ const ProjectCarousel = () => {
     }, 16);
   };
 
-  // Stop scrolling right
+
   const stopScrollRight = () => {
     clearInterval(rightIntervalRef.current);
   };
@@ -73,8 +68,8 @@ const ProjectCarousel = () => {
   return (
     <section className="relative" ref={measureRef}>
       {/* PROJECTS TITLE and ARROW BUTTONS */}
-      <div className="flex justify-evenly mb-4">
-        <h2 className="text-3xl text-primary-dark font-bold">
+      <div className="flex justify-evenly mt-16 mb-8">
+        <h2 className="text-5xl text-primary-dark font-bold">
           projects<span className="text-secondary">.</span>
         </h2>
         {/* BUTTONS */}
@@ -101,7 +96,7 @@ const ProjectCarousel = () => {
           </button>
         </div>
       </div>
-      {/* Make this container scrollable */}
+
       <div
         ref={carouselRef}
         className="flex gap-1 overflow-x-auto scroll-smooth"

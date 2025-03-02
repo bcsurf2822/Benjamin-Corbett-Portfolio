@@ -4,7 +4,7 @@ Welcome 🖐️ to my portfolio! Feel free to view some of my recent projects, l
 
 ## 🔗 Links
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://b-corbett-portfolio.vercel.app/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.benjamincorbettnj.dev/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/benjamin-corbett-84822424a/)
 [![GitHub](https://img.shields.io/badge/GitHub-b)](https://github.com/bcsurf2822)
 

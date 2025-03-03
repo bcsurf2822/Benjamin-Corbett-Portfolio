@@ -5,8 +5,8 @@ import { life, tech } from "../data/aboutData";
 const AboutCards = () => {
   return (
     <div className="flex flex-col gap-6 md:flex-row w-full max-w-screen-lg px-4 md:justify-center md:mx-auto">
-      <ShimmerCard title="about" content={life} />
-      <ShimmerCard title="tech" content={tech} />
+      <ShimmerCard title="code" content={tech} />
+      <ShimmerCard title="life" content={life} />
     </div>
   );
 };

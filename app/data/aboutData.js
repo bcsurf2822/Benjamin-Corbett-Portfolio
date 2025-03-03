@@ -1,12 +1,17 @@
-export const life = [
-  "I am a full-stack developer who enjoys practicing my current skill set by building responsive and scalable applications.",
-  "Outside of tech, I enjoy going to the beach, surfing, skateboarding, spending time with my wife and dog, cooking, hiking, traveling, and doing DIY projects around the house.",
-  "Before getting into software, I was a commercial fisherman for 12 years, fishing out of many ports in the country including Alaska, Massachusetts and California.",
-  "My time there has taught me countless skills such as leadership, responsibility, and the benefits of hard work.",
-  "I've had the privelage to work and laugh with some of the best people and have expereienced so much during our trips at sea.",
+export const tech = [
+  "I am a Full-Stack Software Developer with a strong foundation in JavaScript development, specializing in building responsive web applications using a combination of React, Redux, Next.js, MongoDB, Express.js, and Node.js.",
+
+  "My journey into software began while recovering from an injury sustained on a fishing vessel.  During that time I leveraged online resources to teach myself HTML, JavaScript, and CSS.",
+
+  "In 2023, I enrolled in Parsity, an online coding bootcamp, where I continued to develop my skills in web development, learning front-end frameworks and libraries, workplace best practices, and back-end solutions.",
+
+  "I enjoy practicing on a daily basis and am currently expanding my skill set in TypeScript, Ai integration, and Amazon Web Services.",
 ];
 
-export const tech = [
-  "While recovering from an injury sustained on the boat I took my passion for technology to the next level by using online resources to teach myself HTML, JavaScript, and CSS. In 2023 I joined Parsity, an online coding bootcamp, where I built a strong foundation in React, Redux, MongoDB, Express, and Node.",
-  "Since finishing my course work, I have been practicing with those technologies on a daily basis while working to master my skills in NextJS.  My current interests are TypeScript, AI integration, and Amazon Web Services(AWS).  My goal is to work alongside a great team at a company where I can continue to grow as a person and developer.",
+export const life = [  
+  "Before getting into software, I was a commercial fisherman for 12 years, fishing off the coasts of Alaska, Massachusetts and California.  This experience provided me with life skills such as leadership, resilience, teamwork, and the ability to stay calm in high stress environments.",
+
+  "My life is centered around quality time at home with my family, wife, and dog where I enjoy home improvement projects and cooking.",
+
+  "Outside of tech, I enjoy an active lifestyle where I'm passionate about surfing, skateboarding, traveling, hiking, reading, and yoga.",
 ];

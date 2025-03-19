@@ -5,7 +5,7 @@ export const tech = [
 
   "I enjoyed the material that I was learning, so in 2023, I enrolled in Parsity, where I continued to develop my skills in web development, front-end frameworks and libraries, workplace best practices, and back-end technologies.",
 
-  "I continue to practice with these technologies on a regular basis and am currently expanding my skill set in AI integration, and Amazon Web Services.",
+  "I continue to practice with these technologies on a regular basis and am currently expanding my skill set in AI integration and Amazon Web Services.",
 ];
 
 export const life = [

@@ -9,7 +9,7 @@ export const tech = [
 ];
 
 export const life = [
-  "Before  software, I worked as commercial fisherman for 12 years, fishing off the coasts of Alaska, New Jersey Massachusetts and California.  This experience provided me with key skills such as leadership, resilience, teamwork, and the ability to stay calm in high stress environments.",
+  "Before software, I worked as commercial fisherman for 12 years, fishing off the coasts of Alaska, New Jersey, Massachusetts, and California. This experience provided me with key skills such as leadership, resilience, teamwork, and the ability to stay calm in high stress environments.",
 
   "Outside of tech, I enjoy time with my wife and dog, DIY projects around the house, cooking going to the beach, surfing, camping, surfing, skateboarding, traveling, hiking, reading, and yoga.",
 ];

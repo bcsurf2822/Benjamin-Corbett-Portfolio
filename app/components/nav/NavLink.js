@@ -10,13 +10,13 @@ const NavContent = () => {
       <NavLink href="/#home" text="home" />
       <NavLink href="/#about" text="about" />
       <NavLink href="/#project" text="projects" />
-      <NavLink href="/#contact" text="contact" />
+      <NavLink href="/#contact" text="contact" flipText="Me" />
       <CVButton />
     </nav>
   );
-};
+};``
 
-const NavLink = ({ href, text }) => {
+const NavLink = ({ href, text, flipText}) => {
   return (
     <Link
       href={href}
@@ -26,7 +26,7 @@ const NavLink = ({ href, text }) => {
       <motion.div whileHover={{ y: -30 }}>
         <span className="flex items-center h-[30px] text-white  ">{text}</span>
         <span className="flex items-center h-[30px] text-primary-dark ">
-          {text}
+          {flipText}
         </span>
       </motion.div>
     </Link>

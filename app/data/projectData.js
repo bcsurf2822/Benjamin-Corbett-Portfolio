@@ -1,6 +1,26 @@
 export const projects = [
   {
+    id: 0,
+    imgUrl: "/images/aiq-project.png",
+    tech: "React | Vite | Tailwind CSS | Gemini API",
+    title: "AiQ",
+    description:
+      "AiQ is a structured productivity tool that enhances learning by helping users build better prompts for AI communication. Using the pentagram methodology, it makes AI responses more useful and reliable while providing features like Google Authentication, formatted outputs, and a comprehensive help system.",
+    github: "https://github.com/chingu-voyages/V54-tier2-team-24",
+    demo: "https://getaiq.netlify.app/",
+  },
+  {
     id: 1,
+    imgUrl: "/images/fishreport-project.png",
+    tech: "React | Vite | Tailwind CSS | SQL | .NET | Azure",
+    title: "Fish Inventory",
+    description:
+      "A full-stack application that enables tracking and management of fish inventory using .NET backend services connected to Azure SQL Database. Users can add, edit, and delete fish entries with real-time data persistence and cloud storage.",
+    github: "https://github.com/bcsurf2822/fishInventory",
+    demo: "https://fishnet-in-the-cloud.netlify.app/",
+  },
+  {
+    id: 2,
     imgUrl: "/images/solarRise-project.png",
     tech: "React | Vite | Google Maps API | Tailwind Css",
     title: "SolarRise",
@@ -10,7 +30,7 @@ export const projects = [
     demo: "https://isolar.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     imgUrl: "/images/trello-project.png",
     tech: "React | Next.js | MongoDB | Tanstack Query | NextAuth | Tailwind Css",
     title: "Trello 2.5 ",
@@ -20,7 +40,7 @@ export const projects = [
     demo: "https://trello-2-5.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     imgUrl: "/images/weather-project.png",
     tech: "React | Redux | Next.js",
     title: "Weather Station",
@@ -30,7 +50,7 @@ export const projects = [
     demo: "https://weather-station-one.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     imgUrl: "/images/contact-project.png",
     tech: "Next.js | React | Bootstrap",
     title: "Contact List v2",
@@ -41,7 +61,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     imgUrl: "/images/construction.png",
     tech: "React | Vite | MongoDB | Tailwind Css | Websockets",
     title: "PKR Poker",

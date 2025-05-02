@@ -17,7 +17,7 @@ export const projects = [
     description:
       "A full-stack application that enables tracking and management of fish inventory using .NET backend services connected to Azure SQL Database. Users can add, edit, and delete fish entries with real-time data persistence and cloud storage.",
     github: "https://github.com/bcsurf2822/fishInventory",
-    demo: "https://fishnet-in-the-cloud.netlify.app/",
+    demo: "https://www.loom.com/share/c318d36727c848b185c990367562cdda?sid=9eab638c-7597-4d4d-a145-dc043f0186d2",
   },
   {
     id: 2,

@@ -20,8 +20,8 @@ const AboutCards = () => {
   }
 
   return (
-    <div className="w-full max-w-screen-lg px-4 mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="h-[75vh] w-full max-w-screen-lg px-4 mx-auto py-8 flex flex-col">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-0">
         <CardWithTabs />
         <TimelineCard />
       </div>
@@ -52,11 +52,11 @@ const CardWithTabs = () => {
   const content = activeTab === "code" ? tech : life;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative overflow-hidden rounded-xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300"
+      className="relative overflow-hidden rounded-xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
     >
       {/* Card Header with Tabs */}
       <div className="flex border-b border-gray-100">
@@ -73,7 +73,7 @@ const CardWithTabs = () => {
       </div>
       
       {/* Card Content */}
-      <div className="px-6 py-8">
+      <div className="flex-1 px-6 py-8 overflow-y-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -130,7 +130,7 @@ const TimelineCard = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="relative overflow-hidden rounded-xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300"
+      className="relative overflow-hidden rounded-xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
     >
       <div className="p-6 border-b border-gray-100">
         <h3 className="text-2xl font-bold text-primary-dark">
@@ -138,7 +138,7 @@ const TimelineCard = () => {
         </h3>
       </div>
       
-      <div className="relative px-6 py-8">
+      <div className="relative flex-1 px-6 py-8 overflow-y-auto">
         {/* Timeline items */}
         <Timeline />
       </div>

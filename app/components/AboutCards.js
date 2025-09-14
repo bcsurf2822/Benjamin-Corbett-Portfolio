@@ -134,7 +134,7 @@ const TimelineCard = () => {
     >
       <div className="p-6 border-b border-gray-100">
         <h3 className="text-2xl font-bold text-primary-dark">
-          journey<span className="text-secondary">.</span>
+          experience<span className="text-secondary">.</span>
         </h3>
       </div>
       
@@ -164,19 +164,29 @@ const TimelineCard = () => {
 const Timeline = () => {
   const items = [
     {
-      year: "Mar 2025 - Present",
-      title: "KLoBot Inc. - Intern",
-      description: <>Currently an intern at <Link href="https://www.klobot.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">KLoBot Inc.</Link> learning fundamentals in C#, .NET, Python, SPFx and Microsoft 365 technologies</>
+      year: "June 2025 - Present",
+      title: "KLoBot Inc. - Developer",
+      description: <>Joined full-time at <Link href="https://www.klobot.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">KLoBot Inc.</Link> contributing to enterprise AI solutions (KLapper) across C#, .NET, Python, React, and Angular. Focused on performance optimization, secure Q&A with citations, and Microsoft 365/SharePoint integrations.</>
     },
     {
-      year: "Feb 2023-July 2023",
+      year: "March 2025 - June 2025",
+      title: "KLoBot Inc. - Software Developer Intern",
+      description: <>Completed a 16-week internship at <Link href="https://www.klobot.ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">KLoBot Inc.</Link>, gaining hands-on experience in C#, .NET, Python, SPFx, and Azure. Contributed to NetDocShare, imDocShare, and KLapper while participating in daily standups and Agile sprints. Converted to full-time ahead of schedule.</>
+    },
+    {
+      year: "2024 - 2025",
+      title: "Chingu – Agile/Scrum Developer",
+      description: "Collaborated remotely with a team of 9 to build applications such as SolarRise (sustainable energy platform) and AiQ (AI prompt engineering tool), implementing data validation, UX improvements, and Google Gemini API integrations."
+    },
+    {
+      year: "Feb 2023 - July 2023",
       title: "Parsity Online Code School",
-      description: "Completed an intensive full-stack curriculum focused on MongoDB, React, Next.js, TypeScript, Redux, responsive web design, JavaScript code patterns, and more"
+      description: "Completed a full-stack coding bootcamp covering MongoDB, React, Next.js, TypeScript, Redux Toolkit, responsive design, and modern JavaScript patterns."
     },
     {
-      year: "2011-2023",
+      year: "2011 - 2024",
       title: "Commercial Fisherman",
-      description: "Working on vessels in Alaska, New Jersey, Massachusetts & California"
+      description: "Worked across Alaska, New Jersey, Massachusetts, and California, managing operations in demanding and fast-paced environments."
     }
   ];
 
@@ -190,12 +200,9 @@ const Timeline = () => {
           transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
           className="relative flex items-start group"
         >
-          {/* Connect dots with vertical line */}
           {index !== items.length - 1 && (
             <div className="absolute top-6 left-3 h-[calc(100%+2rem)] w-0.5 bg-gradient-to-b from-primary-light to-secondary-light"></div>
           )}
-          
-          {/* Timeline dot positioned on the vertical line */}
           <motion.div
             whileHover={{ scale: 1.2 }}
             className="min-w-[22px] flex justify-center mt-1 z-10"
@@ -204,8 +211,6 @@ const Timeline = () => {
               <div className="w-2 h-2 rounded-full bg-white"></div>
             </div>
           </motion.div>
-          
-          {/* Content - proper spacing from dots */}
           <div className="ml-8 transition-all duration-300 group-hover:translate-x-1">
             <div className="mb-2">
               <span className="text-xs font-semibold px-2 py-1 rounded-full bg-gray-100 text-gray-600 group-hover:bg-primary/10 transition-colors duration-300 inline-block">

@@ -17,13 +17,13 @@ export default function About() {
         <div className="text-center mb-12 md:mb-16">
           <div className="relative inline-block">
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-primary-dark font-bold relative z-10">
-              myStory<span className="text-secondary">.</span>
+              About Me<span className="text-secondary">.</span>
             </h2>
             <div className="absolute -bottom-2 left-0 right-0 h-3 bg-secondary/10 -rotate-1 rounded-full"></div>
           </div>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+          {/* <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             From the fishing vessel to the keyboard, this is my journey into software development and the path that brought me here.
-          </p>
+          </p> */}
         </div>
         <AboutCards />
       </div>

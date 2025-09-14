@@ -29,7 +29,7 @@ export const ClearNav = () => {
         duration: 1.25,
         ease: "easeInOut",
       }}
-      className="h-[72px] w-full flex justify-evenly sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md "
+      className="h-[72px] w-full flex justify-evenly sticky top-0 z-50 bg-zinc-900/50 backdrop-blur-md "
     >
       {" "}
       <NavContent />

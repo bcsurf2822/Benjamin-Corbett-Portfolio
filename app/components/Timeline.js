@@ -55,7 +55,7 @@ const Timeline = () => {
     {
       year: "2011 - 2024",
       title: "Commercial Fisherman",
-      location: "Alaska, NJ, MA, CA",
+      location: "NJ, MA, CA, AK",
       achievements: [
         "Managed operations in demanding, fast-paced maritime environments",
         "Developed leadership, teamwork, and crisis management skills",

@@ -4,6 +4,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
 import * as THREE from "three";
 import { imageToParticles, updateParticlePhysics } from "../utils/particleUtils";
+import FloatingIcons from "./FloatingIcons";
 
 // Tech logos organized in a balanced grid
 const techLogos = [
@@ -223,42 +224,82 @@ export default function HeroParticles() {
         style={{ background: "transparent" }}
       />
 
-      <div className="mb-24 z-20 bg-neutral-50/80 backdrop-blur-sm p-8 rounded-2xl">
-        <Reveal>
-          <h1 className="text-4xl sm:text-6xl font-black text-primary-dark md:text-8xl text-center">
-            Benjamin Corbett<span className="text-secondary">.</span>
-          </h1>
-        </Reveal>
-        <Reveal>
-          <h2 className="my-2 text-xl sm:text-2xl text-copy md:my-4 md:text-4xl text-center">
-            NJ Based{" "}
-            <span className="font-semibold text-indigo-500">
-              Full-Stack Developer
-            </span>
-          </h2>
-        </Reveal>
-        <Reveal>
-          <div className="flex justify-center mt-6">
-            <Link href="#project">
-              <button className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-lg transition-colors duration-300 flex items-center gap-2">
-                View My Projects
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </Link>
-          </div>
-        </Reveal>
+      <div className="mb-24 z-20 relative p-10 rounded-[3rem] overflow-hidden">
+        {/* Glass morphism background with more opacity */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-200/50 via-slate-100/60 to-slate-200/50 backdrop-blur-2xl border border-white/50" />
+
+        {/* Shimmer effect overlay */}
+        <motion.div
+          animate={{
+            x: ["-100%", "100%"],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 4,
+            ease: "linear",
+          }}
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+          style={{
+            width: "50%",
+          }}
+        />
+
+        {/* Subtle animated gradient overlay */}
+        <motion.div
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 50%, rgba(148, 163, 184, 0.3) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 50%, rgba(203, 213, 225, 0.3) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(148, 163, 184, 0.3) 0%, transparent 50%)",
+            ],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 8,
+            ease: "easeInOut",
+          }}
+          className="absolute inset-0"
+        />
+
+        <div className="relative z-10">
+          <Reveal>
+            <h1 className="text-4xl sm:text-6xl font-black text-slate-700 md:text-8xl text-center">
+              Benjamin Corbett<span className="text-slate-600">.</span>
+            </h1>
+          </Reveal>
+          <Reveal>
+            <h2 className="my-2 text-xl sm:text-2xl text-slate-600 md:my-4 md:text-4xl text-center">
+              NJ Based{" "}
+              <span className="font-semibold text-slate-700">
+                Full-Stack Developer
+              </span>
+            </h2>
+          </Reveal>
+          <Reveal>
+            <div className="flex justify-center mt-6">
+              <Link href="#project">
+                <button className="px-6 py-3 bg-slate-700 hover:bg-slate-800 text-white font-medium rounded-lg transition-colors duration-300 flex items-center gap-2 shadow-lg">
+                  View My Projects
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </Link>
+            </div>
+          </Reveal>
+        </div>
       </div>
+
+      <FloatingIcons />
 
       {isLoading && (
         <div className="absolute bottom-10 text-white/60 text-sm z-20">

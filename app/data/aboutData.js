@@ -1,15 +1,11 @@
-export const tech = [
-  "I am a Full-Stack Software Developer with a strong foundation in JavaScript development. I specialize in building responsive web applications using React, Redux, Next.js, MongoDB, Express.js, and Node.js.",
+export const aboutContent = {
+  intro: "I am a Full-Stack Software Developer specializing in building enterprise-grade web applications with modern JavaScript technologies. Currently working at KLoBot Inc., I contribute to AI-powered solutions that integrate with Microsoft 365 and SharePoint ecosystems.",
 
-  "My journey into software began while recovering from an injury sustained on a fishing vessel.  During that time I used online resources to teach myself HTML, JavaScript, and CSS.",
+  techFocus: "My technical expertise spans the full stack: React, Next.js, TypeScript, and Angular on the frontend; C#, .NET, Python, Node.js, and Express.js on the backend; with hands-on experience in Azure cloud services, MongoDB, PostgreSQL, and RESTful API design. I'm passionate about performance optimization, secure authentication patterns, and building scalable architectures.",
 
-  "I enjoyed the material that I was learning, so in 2023, I enrolled in Parsity, where I continued to develop my skills in web development, front-end frameworks and libraries, workplace best practices, and back-end technologies.",
+  journey: "My journey into software began unconventionally while recovering from an injury sustained as a commercial fisherman. Self-teaching HTML, CSS, and JavaScript sparked a passion that led me to Parsity's full-stack bootcamp in 2023, where I mastered modern web development practices, Redux state management, and responsive design patterns.",
 
-  "I continue to practice with these technologies on a regular basis and am currently expanding my skill set in AI integration and Amazon Web Services.",
-];
+  currentFocus: "I'm actively expanding my skill set in AI integration with LangChain and OpenAI APIs, exploring cloud infrastructure with AWS and Azure, and deepening my knowledge of containerization with Docker. I contribute to open-source projects and participate in remote team collaborations through platforms like Chingu.",
 
-export const life = [
-  "Before software, I worked as commercial fisherman for 12 years, fishing off the coasts of Alaska, New Jersey, Massachusetts, and California. This experience provided me with key skills such as leadership, resilience, teamwork, and the ability to stay calm in high stress environments.",
-
-  "Outside of tech, I enjoy time with my wife and dog, DIY projects around the house, cooking going to the beach, surfing, camping, surfing, skateboarding, traveling, hiking, reading, and yoga.",
-];
+  background: "My 12 years as a commercial fisherman across Alaska, New Jersey, Massachusetts, and California instilled critical soft skills: leadership under pressure, adaptability in fast-paced environments, and effective team communication. Outside of coding, I enjoy surfing, camping, DIY home projects, and spending time with my wife and dog."
+};

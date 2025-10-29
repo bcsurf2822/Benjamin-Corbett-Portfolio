@@ -1,6 +1,6 @@
 import React from "react";
 import AboutCards from "../components/AboutCards";
-import { Metadata } from "next";
+import Timeline from "../components/Timeline";
 
 export const metadata = {
   title: "Benjamin Corbett - About",
@@ -17,17 +17,23 @@ export default function About() {
         <div className="text-center mb-12 md:mb-16">
           <div className="relative inline-block">
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-primary-dark font-bold relative z-10">
-              About Me<span className="text-secondary">.</span>
+              About<span className="text-secondary">.</span>
             </h2>
             <div className="absolute -bottom-2 left-0 right-0 h-3 bg-secondary/10 -rotate-1 rounded-full"></div>
           </div>
-          {/* <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            From the fishing vessel to the keyboard, this is my journey into software development and the path that brought me here.
-          </p> */}
         </div>
         <AboutCards />
+
+        <div id="experience" className="mt-16 md:mt-20 scroll-mt-[80px]">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl text-primary-dark font-bold">
+              Experience<span className="text-secondary">.</span>
+            </h3>
+          </div>
+          <Timeline />
+        </div>
       </div>
-      
+
       {/* Background decorations */}
       <div className="absolute top-20 right-[5%] w-32 h-32 rounded-full bg-primary/5 blur-3xl"></div>
       <div className="absolute bottom-20 left-[5%] w-48 h-48 rounded-full bg-secondary/5 blur-3xl"></div>

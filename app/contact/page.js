@@ -20,17 +20,14 @@ export default function Contact() {
             <div className="absolute -bottom-2 left-0 right-0 h-3 bg-slate-300/30 -rotate-1 rounded-full"></div>
           </div>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            Lets collaborate on your next project or design a site to{" "}
-            <span className="text-2xl md:text-3xl font-bold text-slate-700">
-              BUILD
-            </span>{" "}
-            your business!
+            Lets collaborate on your next project or design a site to
+            build your business!
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <SocialLink
-            link="https://www.linkedin.com/in/benjamin-corbett-84822424a"
+            link="https://www.linkedin.com/in/corbett-benjamin/"
             icon={faLinkedin}
             label="LinkedIn"
             color="bg-[#0077B5]"

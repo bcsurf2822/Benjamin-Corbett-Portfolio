@@ -12,12 +12,12 @@ export const projects = [
   {
     id: 1,
     imgUrl: "/images/fishreport-project.png",
-    tech: "React | Vite | Tailwind CSS | SQL | .NET | Azure",
-    title: "Fish Inventory",
+    tech: "React | Vite | Tailwind CSS | C# | SQL Server | .NET | AWS",
+    title: "Fish House",
     description:
-      "A full-stack application that enables tracking and management of fish inventory using .NET backend services connected to Azure SQL Database. Users can add, edit, and delete fish entries with real-time data persistence and cloud storage.",
-    github: "https://github.com/bcsurf2822/fishInventory",
-    demo: "https://www.loom.com/share/c318d36727c848b185c990367562cdda?sid=9eab638c-7597-4d4d-a145-dc043f0186d2",
+      "Fish House is a full-stack fishing report application built with React (Vite) on the frontend and .NET Web API on the backend, using SQL Server for data persistence. The application enables users to track fishing catches, record species, sizes, locations, and conditions through an intuitive interface. It's deployed on AWS using Elastic Beanstalk for the backend API, RDS for the database, and S3/CloudFront for frontend hosting.",
+    github: "https://github.com/bcsurf2822/fish-house",
+    demo: "https://fish-house-demo.netlify.app/",
   },
   {
     id: 2,
@@ -39,35 +39,35 @@ export const projects = [
     github: "https://github.com/bcsurf2822/trello-2.5",
     demo: "https://trello-2-5.vercel.app/",
   },
-  {
-    id: 4,
-    imgUrl: "/images/weather-project.png",
-    tech: "React | Redux | Next.js",
-    title: "Weather Station",
-    description:
-      " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure.",
-    github: "https://github.com/bcsurf2822/WeatherStation",
-    demo: "https://weather-station-one.vercel.app/",
-  },
-  {
-    id: 5,
-    imgUrl: "/images/contact-project.png",
-    tech: "Next.js | React | Bootstrap",
-    title: "Contact List v2",
-    description:
-      "Includes features to add or delete a contact. Double-click on the list item to view the information card of the contact.",
-    github: "https://github.com/bcsurf2822/contact-list-v2",
-    demo: "https://contact-list-v2-navy.vercel.app/",
-  },
+  // {
+  //   id: 4,
+  //   imgUrl: "/images/weather-project.png",
+  //   tech: "React | Redux | Next.js",
+  //   title: "Weather Station",
+  //   description:
+  //     " A fully responsive weather application that features a custom component that uses Google Autocomplete API and Openweather API to display a 5 day forecast chart for Temperature Humidity and Pressure.",
+  //   github: "https://github.com/bcsurf2822/WeatherStation",
+  //   demo: "https://weather-station-one.vercel.app/",
+  // },
+  // {
+  //   id: 5,
+  //   imgUrl: "/images/contact-project.png",
+  //   tech: "Next.js | React | Bootstrap",
+  //   title: "Contact List v2",
+  //   description:
+  //     "Includes features to add or delete a contact. Double-click on the list item to view the information card of the contact.",
+  //   github: "https://github.com/bcsurf2822/contact-list-v2",
+  //   demo: "https://contact-list-v2-navy.vercel.app/",
+  // },
 
-  {
-    id: 6,
-    imgUrl: "/images/construction.png",
-    tech: "React | Vite | MongoDB | Tailwind Css | Websockets",
-    title: "PKR Poker",
-    description:
-      "The purpose for this project is to clone a poker appication.  The user will be able to have their own account and be able to play a round of Texas Hold 'Em Poker against another player. Feel free to track my progress!",
-    github: "https://github.com/bcsurf2822/prismPoker",
-    demo: "https://pkrpoker.netlify.app/",
-  },
+  // {
+  //   id: 6,
+  //   imgUrl: "/images/construction.png",
+  //   tech: "React | Vite | MongoDB | Tailwind Css | Websockets",
+  //   title: "PKR Poker",
+  //   description:
+  //     "The purpose for this project is to clone a poker appication.  The user will be able to have their own account and be able to play a round of Texas Hold 'Em Poker against another player. Feel free to track my progress!",
+  //   github: "https://github.com/bcsurf2822/prismPoker",
+  //   demo: "https://pkrpoker.netlify.app/",
+  // },
 ];

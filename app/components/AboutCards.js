@@ -58,7 +58,7 @@ const AboutCard = () => {
       <Card
         className={cn(
           "group relative transition-all duration-300",
-          "overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-gray-200/80 shadow-lg"
+          "overflow-hidden bg-gradient-to-br from-slate-200/85 via-slate-100/90 to-slate-200/85 backdrop-blur-2xl border border-white/50 shadow-lg"
         )}
       >
         <CardContent className="relative px-8 py-10 md:px-12 md:py-14">
@@ -66,7 +66,7 @@ const AboutCard = () => {
             {paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-lg md:text-xl text-gray-800 leading-relaxed font-normal"
+                className="text-lg md:text-xl text-slate-700 leading-relaxed font-normal"
               >
                 {paragraph}
               </p>
@@ -76,7 +76,7 @@ const AboutCard = () => {
 
         <div
           className={cn(
-            "absolute inset-0 -z-10 rounded-xl p-px bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/10",
+            "absolute inset-0 -z-10 rounded-xl p-px bg-gradient-to-br from-slate-300/20 via-slate-200/20 to-slate-300/20",
             "opacity-50"
           )}
         />

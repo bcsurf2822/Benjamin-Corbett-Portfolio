@@ -26,7 +26,7 @@ const ProjectCard = ({ tech, title, github, demo, description }) => {
       </div>
 
       {/* Description Section */}
-      <div className="flex-grow mb-4">
+      <div className="mb-4 h-[160px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
         <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
       </div>
 

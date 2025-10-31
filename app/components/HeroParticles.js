@@ -5,6 +5,9 @@ import Link from "next/link";
 import * as THREE from "three";
 import { imageToParticles, updateParticlePhysics } from "../utils/particleUtils";
 import FloatingIcons from "./FloatingIcons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 // Tech logos organized in a balanced grid
 const techLogos = [
@@ -276,9 +279,48 @@ export default function HeroParticles() {
             </h2>
           </Reveal>
           <Reveal>
-            <div className="flex justify-center mt-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
+              {/* Social Links */}
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.linkedin.com/in/benjamin-corbett/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/90 hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  aria-label="LinkedIn Profile"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    className="text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"
+                  />
+                </a>
+                <a
+                  href="https://github.com/bcsurf2822"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/90 hover:bg-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  aria-label="GitHub Profile"
+                >
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="text-2xl text-slate-700 group-hover:text-white transition-colors duration-300"
+                  />
+                </a>
+                <button
+                  onClick={() => window.open("./docs/benjaminCorbettResume.pdf")}
+                  className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/90 hover:bg-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  aria-label="Download Resume"
+                >
+                  <FontAwesomeIcon
+                    icon={faFileAlt}
+                    className="text-2xl text-slate-700 group-hover:text-white transition-colors duration-300"
+                  />
+                </button>
+              </div>
+
+              {/* View Projects Button */}
               <Link href="#project">
-                <button className="px-6 py-3 bg-slate-700 hover:bg-slate-800 text-white font-medium rounded-lg transition-colors duration-300 flex items-center gap-2 shadow-lg">
+                <button className="px-6 py-3 bg-white/90 hover:bg-slate-700 text-slate-700 hover:text-white font-medium rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl">
                   View My Projects
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

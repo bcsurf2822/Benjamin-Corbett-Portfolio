@@ -7,19 +7,32 @@ import Link from "next/link";
 // Tech logos with your updated paths
 const techLogos = [
   { name: "React", path: "/logos/react.svg", size: 40 },
-  { name: "JavaScript", path: "/logos/javascript.svg", size: 36 },
-  { name: "Node.js", path: "/logos/nodedotjs.svg", size: 38 },
-  { name: "MongoDB", path: "/logos/mongodb.svg", size: 42 },
-  { name: "Express", path: "/logos/express.svg", size: 38 },
-  { name: "Redux", path: "/logos/redux.svg", size: 36 },
-  { name: "Tailwind CSS", path: "/logos/tailwindcss.svg", size: 40 },
+  { name: "Next.js", path: "/logos/nextdotjs.svg", size: 40 },
   { name: "TypeScript", path: "/logos/typescript.svg", size: 36 },
-  { name: "HTML5", path: "/logos/html5.svg", size: 34 },
-  { name: "CSS3", path: "/logos/css.svg", size: 34 },
+  { name: "JavaScript", path: "/logos/javascript.svg", size: 36 },
+  { name: "Redux", path: "/logos/redux.svg", size: 36 },
+  { name: "React Query", path: "/logos/reactquery.svg", size: 38 },
+  { name: "Tailwind CSS", path: "/logos/tailwindcss.svg", size: 40 },
+  { name: "Framer Motion", path: "/logos/framermotion.svg", size: 38 },
+  { name: "Angular", path: "/logos/angular.svg", size: 38 },
+  { name: "Node.js", path: "/logos/nodedotjs.svg", size: 38 },
+  { name: "Express", path: "/logos/express.svg", size: 38 },
+  { name: ".NET", path: "/logos/dotnet.svg", size: 38 },
+  { name: "C#", path: "/logos/csharp.svg", size: 36 },
+  { name: "Python", path: "/logos/python.svg", size: 38 },
+  { name: "Azure", path: "/logos/azure.svg", size: 40 },
+  { name: "AWS", path: "/logos/aws.svg", size: 40 },
+  { name: "GCP", path: "/logos/gcp.svg", size: 40 },
+  { name: "Digital Ocean", path: "/logos/digitalocean.svg", size: 38 },
+  { name: "OpenAI", path: "/logos/openai.svg", size: 38 },
+  { name: "Hugging Face", path: "/logos/huggingface.svg", size: 40 },
+  { name: "LangChain", path: "/logos/langchain.svg", size: 38 },
+  { name: "MongoDB", path: "/logos/mongodb.svg", size: 42 },
+  { name: "PostgreSQL", path: "/logos/postgresql.svg", size: 38 },
+  { name: "Firebase", path: "/logos/firebase.svg", size: 38 },
+  { name: "Docker", path: "/logos/docker.svg", size: 40 },
   { name: "Git", path: "/logos/git.svg", size: 38 },
   { name: "GitHub", path: "/logos/github.svg", size: 40 },
-  { name: "Next.js", path: "/logos/nextdotjs.svg", size: 40 },
-  { name: "Mui", path: "/logos/mui.svg", size: 40 },
 ];
 
 export default function Hero() {
@@ -28,6 +41,8 @@ export default function Hero() {
   const [animatedLogos, setAnimatedLogos] = useState([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [containerWidth, setContainerWidth] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const updateWidth = () => {
@@ -36,16 +51,27 @@ export default function Hero() {
       }
     };
 
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     updateWidth();
     window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
     if (containerWidth === 0) return;
 
-    const firstRow = techLogos.slice(0, 7);
-    const secondRow = techLogos.slice(7);
+    // Distribute logos across 3 rows for better layout
+    const logosPerRow = 9;
+    const firstRow = techLogos.slice(0, logosPerRow);
+    const secondRow = techLogos.slice(logosPerRow, logosPerRow * 2);
+    const thirdRow = techLogos.slice(logosPerRow * 2);
 
     const logoGap = 60;
     const calculateRowPositions = (logos, rowY) => {
@@ -56,17 +82,18 @@ export default function Hero() {
         ...logo,
         baseX: startX + i * logoGap,
         baseY: rowY,
-
         returnDuration: 1.2 + Math.random() * 0.8,
         jiggle: 2 + Math.random() * 2,
         jiggleDuration: 2 + Math.random() * 1.5,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
       }));
     };
 
-    const row1Logos = calculateRowPositions(firstRow, 60);
-    const row2Logos = calculateRowPositions(secondRow, 120);
+    const row1Logos = calculateRowPositions(firstRow, 40);
+    const row2Logos = calculateRowPositions(secondRow, 100);
+    const row3Logos = calculateRowPositions(thirdRow, 160);
 
-    setAnimatedLogos([...row1Logos, ...row2Logos]);
+    setAnimatedLogos([...row1Logos, ...row2Logos, ...row3Logos]);
   }, [containerWidth]);
 
   const handleMouseMove = (e) => {
@@ -114,7 +141,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="relative w-full h-44 z-10"
+        className="relative w-full h-56 z-10"
         ref={logosContainerRef}
         onMouseMove={handleMouseMove}
       >
@@ -124,6 +151,7 @@ export default function Hero() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           const influenceRadius = 100;
+          const isHovered = hoveredIndex === index;
 
           const repulsionForce =
             distance < influenceRadius
@@ -134,10 +162,13 @@ export default function Hero() {
           const repulsionX = -Math.cos(angle) * repulsionForce;
           const repulsionY = -Math.sin(angle) * repulsionForce;
 
+          // Scroll-based bounce effect
+          const scrollBounce = Math.sin(scrollY * 0.02 + index) * 3;
+
           return (
             <motion.div
               key={index}
-              className="absolute"
+              className="absolute cursor-pointer"
               style={{ left: logo.baseX, top: logo.baseY }}
               animate={{
                 x:
@@ -146,10 +177,11 @@ export default function Hero() {
                     : [-logo.jiggle, logo.jiggle, -logo.jiggle],
                 y:
                   distance < influenceRadius
-                    ? repulsionY
-                    : [-logo.jiggle, logo.jiggle, -logo.jiggle],
+                    ? repulsionY + scrollBounce
+                    : [-logo.jiggle, logo.jiggle, -logo.jiggle, scrollBounce],
                 rotate:
                   distance < influenceRadius ? repulsionX * 0.2 : [-2, 2, -2],
+                scale: isHovered ? 1.3 : 1,
               }}
               transition={{
                 x:
@@ -181,6 +213,20 @@ export default function Hero() {
                   repeat: Infinity,
                   repeatType: "mirror",
                 },
+                scale: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              whileHover={{
+                filter: [
+                  "brightness(1)",
+                  "brightness(1.5) saturate(1.5)",
+                  "brightness(1)",
+                ],
               }}
             >
               <Image
@@ -188,7 +234,10 @@ export default function Hero() {
                 alt={`${logo.name} logo`}
                 width={logo.size}
                 height={logo.size}
-                className="object-contain"
+                className="object-contain transition-all duration-300"
+                style={{
+                  filter: isHovered ? "drop-shadow(0 0 10px rgba(99, 102, 241, 0.8))" : "none",
+                }}
               />
             </motion.div>
           );

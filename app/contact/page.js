@@ -9,16 +9,19 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden flex flex-col items-center justify-center scroll-mt-[80px] min-h-[100vh] bg-neutral-50 px-6 md:px-12 py-16 md:py-32"
+      className="relative overflow-hidden flex flex-col items-center justify-center scroll-mt-[80px] min-h-[100vh] bg-gradient-to-b from-white via-sky-50/20 to-blue-50/30 px-6 md:px-12 py-16 md:py-32"
     >
       <div className="relative z-10 w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">
-            connect<span className="text-secondary">.</span>
-          </h2>
+          <div className="relative inline-block mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-700 relative z-10">
+              connect<span className="text-slate-600">.</span>
+            </h2>
+            <div className="absolute -bottom-2 left-0 right-0 h-3 bg-slate-300/30 -rotate-1 rounded-full"></div>
+          </div>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
             Lets collaborate on your next project or design a site to{" "}
-            <span className="text-2xl md:text-3xl font-bold text-primary-dark">
+            <span className="text-2xl md:text-3xl font-bold text-slate-700">
               BUILD
             </span>{" "}
             your business!

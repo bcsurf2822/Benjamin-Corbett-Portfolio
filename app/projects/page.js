@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section
       id="project"
-      className="flex scroll-mt-[80px] h-[100vh]   items-center bg-neutral-50 border-b-2 border-neutral-200 "
+      className="scroll-mt-[80px] min-h-[100vh] flex items-center bg-gray-100 py-16"
     >
       <ProjectCarousel />
     </section>

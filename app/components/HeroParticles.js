@@ -68,7 +68,7 @@ export default function HeroParticles() {
 
     const logosPerRow = 9;
     const spacing = 0.8;
-    const particlesPerLogo = 1000;
+    const particlesPerLogo = 400;
 
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
@@ -182,7 +182,7 @@ export default function HeroParticles() {
           },
           logoData.originalPositions,
           localIntersection,
-          0.4,
+          0.25,
           0.08,
           0.04,
           0.92
@@ -226,7 +226,7 @@ export default function HeroParticles() {
 
       <div className="mb-24 z-20 relative p-10 rounded-[3rem] overflow-hidden">
         {/* Glass morphism background with more opacity */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-200/50 via-slate-100/60 to-slate-200/50 backdrop-blur-2xl border border-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-200/85 via-slate-100/90 to-slate-200/85 backdrop-blur-2xl border border-white/50" />
 
         {/* Shimmer effect overlay */}
         <motion.div

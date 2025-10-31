@@ -1,16 +1,6 @@
 export const projects = [
   {
     id: 0,
-    imgUrl: "/images/aiq-project.png",
-    tech: "React | Vite | Tailwind CSS | Gemini API",
-    title: "AiQ",
-    description:
-      "AiQ is a structured productivity tool that enhances learning by helping users build better prompts for AI communication. Using the pentagram methodology, it makes AI responses more useful and reliable while providing features like Google Authentication, formatted outputs, and a comprehensive help system.",
-    github: "https://github.com/chingu-voyages/V54-tier2-team-24",
-    demo: "https://getaiq.netlify.app/",
-  },
-  {
-    id: 1,
     imgUrl: "/images/fishreport-project.png",
     tech: "React | Vite | Tailwind CSS | C# | SQL Server | .NET | AWS",
     title: "Fish House",
@@ -20,7 +10,27 @@ export const projects = [
     demo: "https://fish-house-demo.netlify.app/",
   },
   {
+    id: 1,
+    imgUrl: "/images/coastal-project.png",
+    tech: "Next.js | MongoDB | Tailwind CSS | Square Payments",
+    title: "Coastal Creations Studio",
+    description:
+      "A comprehensive art studio website built for a freelance client, featuring a modern coastal aesthetic and full-stack functionality. The site includes an event management system where the studio owner can create and manage art classes, camps, and workshops through an admin dashboard. Users can browse the calendar, view class details, and register for events with integrated Square payment processing. The platform streamlines the studio's operations while providing an engaging experience for visitors to explore creative offerings.",
+    github: "",
+    demo: "https://coastalcreationsstudio.com/",
+  },
+  {
     id: 2,
+    imgUrl: "/images/aiq-project.png",
+    tech: "React | Vite | Tailwind CSS | Gemini API",
+    title: "AiQ",
+    description:
+      "AiQ is a structured productivity tool that enhances learning by helping users build better prompts for AI communication. Using the pentagram methodology, it makes AI responses more useful and reliable while providing features like Google Authentication, formatted outputs, and a comprehensive help system.",
+    github: "https://github.com/chingu-voyages/V54-tier2-team-24",
+    demo: "https://getaiq.netlify.app/",
+  },
+  {
+    id: 3,
     imgUrl: "/images/solarRise-project.png",
     tech: "React | Vite | Google Maps API | Tailwind Css",
     title: "SolarRise",
@@ -30,7 +40,7 @@ export const projects = [
     demo: "https://isolar.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     imgUrl: "/images/trello-project.png",
     tech: "React | Next.js | MongoDB | Tanstack Query | NextAuth | Tailwind Css",
     title: "Trello 2.5 ",

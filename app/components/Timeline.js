@@ -101,7 +101,7 @@ const Timeline = () => {
                 {item.title}
               </h4>
               {item.company && (
-                <p className="font-semibold text-primary text-base mb-2">
+                <p className="font-semibold text-blue-600 dark:text-blue-400 text-base mb-2">
                   {item.company}
                 </p>
               )}
@@ -115,7 +115,7 @@ const Timeline = () => {
               <ul className="space-y-2">
                 {item.achievements.map((achievement, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-primary mr-3 mt-1.5 text-xs">▸</span>
+                    <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1.5 text-xs">▸</span>
                     <span className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-1">
                       {achievement}
                     </span>
